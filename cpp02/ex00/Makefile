@@ -6,14 +6,14 @@
 #    By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 23:58:40 by vvazzs            #+#    #+#              #
-#    Updated: 2025/12/02 21:32:30 by jeslin-tici      ###   ########.fr        #
+#    Updated: 2025/12/13 16:36:31 by jeslin-tici      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-NAME	=	harl
+NAME	=	fixed
 SRC		=	main.cpp \
 			Fixed.cpp
 

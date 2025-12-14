@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:32:53 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/02 23:16:20 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/13 16:37:43 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Fixed{
 	
 	public:
 		Fixed();
-		Fixed(const Fixed& other);
-		Fixed& operator=(const Fixed& other);
+		Fixed(const Fixed& newObj); // copy constructor
+		Fixed& operator=(const Fixed& newObj); // copy assignment operator
 		~Fixed();
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
