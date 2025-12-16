@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 09:39:01 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/14 10:25:16 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/16 17:39:44 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,13 @@ int Fixed::toInt(void) const
 	return (fixed_number >> bits);
 }
 
+std::ostream& operator<<(std::ostream& out, const Fixed& value)
+{
+	out << value.toFloat(); //gotta use toFloat because it uses actual numbers instead of fixed point
+    return out;
+}
+
 Fixed::~Fixed(void)
 {
 	std::cout << "Destructor called\n";
-}
-
-std::ostream& operator<<(std::ostream& out, const Fixed& value) {
-    out << value.toFloat();
-    return out;
 }
