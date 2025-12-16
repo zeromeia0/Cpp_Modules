@@ -5,17 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/12/16 17:45:43 by jeslin-tici       #+#    #+#              #
-#    Updated: 2025/12/16 21:27:16 by jeslin-tici      ###   ########.fr        #
+#    Created: 2025/12/16 21:27:07 by jeslin-tici       #+#    #+#              #
+#    Updated: 2025/12/16 21:27:48 by jeslin-tici      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-NAME	=	fixed
+NAME	=	ClapTrap
 SRC		=	main.cpp \
-			Fixed.cpp
+			ClapTrap.cpp
 
 OBJ		= $(SRC:.cpp=.o)
 

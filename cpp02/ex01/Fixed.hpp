@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 09:38:58 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/16 17:27:54 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/16 21:09:21 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class Fixed{
 	private:
-		int fixed_number;
+		int fixedNumber;
 		static const int bits = 8;
 	public:
 		Fixed();

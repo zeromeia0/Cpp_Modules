@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/02 21:32:53 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/16 21:09:20 by jeslin-tici      ###   ########.fr       */
+/*   Created: 2025/12/16 21:28:11 by jeslin-tici       #+#    #+#             */
+/*   Updated: 2025/12/16 22:13:29 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 # include <iostream>
 # include <iomanip>
+# include <cmath>
+# define maxHP 10
 
-class Fixed{
+class ClapTrap
+{
 	private:
-		int fixedNumber;
-		static const int bits = 8;
+		std::string name;
+		int healthPoints;
+		int energyPoints;
+		int attackDamage;	
 	
 	public:
-		Fixed();
-		Fixed(const Fixed& newObj); // copy constructor
-		Fixed& operator=(const Fixed& newObj); // copy assignment operator
-		~Fixed();
-		int getRawBits(void) const;
-		void setRawBits(int const raw);
+		ClapTrap();
+		ClapTrap(std::string newName);
+		ClapTrap(const ClapTrap& newObj);
+		ClapTrap& operator=(const ClapTrap& newObj);
+		~ClapTrap();
+		
+		void attack(const std::string& target);
+		void takeDamage(unsigned int amount);
+		void beRepaired(unsigned int amount);
 };
 #endif

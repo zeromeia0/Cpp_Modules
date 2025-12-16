@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 09:39:01 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/16 17:39:44 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/16 21:09:21 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 Fixed::Fixed(void)
 {
-	fixed_number = 0;
+	fixedNumber = 0;
 	std::cout << "Default constructor called\n";
 }
 
 Fixed::Fixed(const int value)
 {
 	std::cout << "Int constructor called\n";
-	fixed_number = value << bits;
+	fixedNumber = value << bits;
 }
 
 Fixed::Fixed(const float value)
 {
 	std::cout << "Float constructor called\n";
-	fixed_number = static_cast<int>(roundf(value *(1 << bits))); //STUDY BETTER THE ROUNDF AND BITS OPERATIONS AGAIN
+	fixedNumber = static_cast<int>(roundf(value *(1 << bits))); //STUDY BETTER THE ROUNDF AND BITS OPERATIONS AGAIN
 }
 
 Fixed::Fixed(const Fixed& newObj)
@@ -40,27 +40,27 @@ Fixed& Fixed::operator=(const Fixed& newObj)
 {
 	std::cout << "Copy assingment operator called\n";
 	if (this != &newObj)
-		this->fixed_number = newObj.getRawBits();
+		this->fixedNumber = newObj.getRawBits();
 	return (*this);
 }
 
 int Fixed::getRawBits(void) const
 {
-	return (this->fixed_number);
+	return (this->fixedNumber);
 }
 void Fixed::setRawBits(int const raw)
 {
-	this->fixed_number = raw;
+	this->fixedNumber = raw;
 }
 
 float Fixed::toFloat(void) const // study again this const after the function because wtf
 {
-	return (fixed_number / static_cast<float>(1 << bits)); //improve bitwise operations you dumbass
+	return (fixedNumber / static_cast<float>(1 << bits)); //improve bitwise operations you dumbass
 }
 
 int Fixed::toInt(void) const
 {
-	return (fixed_number >> bits);
+	return (fixedNumber >> bits);
 }
 
 std::ostream& operator<<(std::ostream& out, const Fixed& value)
