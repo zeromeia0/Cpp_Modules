@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 13:15:20 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/18 20:29:46 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/18 21:11:08 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& newObj)
 {
 	std::cout << "ScavTrap copy assignment constructor called\n";
 	if (this != &newObj)
-	{
-		this->name = newObj.name;
-		this->healthPoints = newObj.healthPoints;
-		this->energyPoints = newObj.energyPoints;
-		this->attackDamage = newObj.attackDamage;
-	}
+		ClapTrap::operator=(newObj);
 	return (*this);
 }
 

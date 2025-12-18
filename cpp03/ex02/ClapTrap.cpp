@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 21:36:41 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/18 20:43:26 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/18 20:52:17 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ ClapTrap::ClapTrap(std::string newName, int healthPoints, int energyPOints, int 
 {
 	std::cout << "ClapTrap parameter constructor called\n";
 }
-
 
 ClapTrap::ClapTrap(std::string newName) : name(newName), healthPoints(10), energyPoints(10), attackDamage(10)
 {

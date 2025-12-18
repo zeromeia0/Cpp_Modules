@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 20:33:47 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/18 20:40:08 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/18 21:13:08 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,29 +38,8 @@ FragTrap& FragTrap::operator=(const FragTrap& newObj)
 {
 	std::cout << "FragTrap copy assignment constructor called\n";
 	if (this != &newObj)
-	{
-		this->name = newObj.name;
-		this->healthPoints = newObj.healthPoints;
-		this->energyPoints = newObj.energyPoints;
-		this->attackDamage = newObj.attackDamage;
-	}
+		ClapTrap::operator=(newObj);
 	return (*this);
-}
-
-void FragTrap::attack(const std::string& target)
-{
-	if (healthPoints <= 0)
-	{
-		std::cout << "FragTrap " << name << " is dead\n";
-		return ;
-	}
-	if (energyPoints <= 0)
-	{
-		std::cout << "FragTrap " << name << " is low on batteries\n";
-		return ; 
-	}
-	energyPoints--;
-	std::cout << "FragTrap " << this->name << " attacks " << target << " causing " << this->attackDamage << " points of damage!\n";
 }
 
 void FragTrap::highFivesGuys(void)
