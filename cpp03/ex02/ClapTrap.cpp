@@ -6,15 +6,21 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 21:36:41 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/18 20:43:16 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/18 20:43:26 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void) : name("Default"), healthPoints(10), energyPoints(10), attackDamage(10)
+ClapTrap::ClapTrap() : name("Default"), healthPoints(10), energyPoints(10), attackDamage(10)
 {
 	std::cout << "Default ClapTrap created\n";
+}
+
+ClapTrap::ClapTrap(std::string newName, int healthPoints, int energyPOints, int attackDamage)
+	: name(newName), healthPoints(healthPoints), energyPoints(energyPOints), attackDamage(attackDamage)
+{
+	std::cout << "ClapTrap parameter constructor called\n";
 }
 
 
@@ -25,13 +31,13 @@ ClapTrap::ClapTrap(std::string newName) : name(newName), healthPoints(10), energ
 
 ClapTrap::ClapTrap(const ClapTrap& newObj)
 {
-	std::cout << "Copy constructor called\n";
+	std::cout << "ClapTrap Copy constructor called\n";
 	*this = newObj;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& newObj)
 {
-	std::cout << "Copy assingment constructor called\n";
+	std::cout << "ClapTrap Copy assingment constructor called\n";
 	if (this != &newObj)
 	{
 		this->name = newObj.name;
@@ -100,5 +106,5 @@ void ClapTrap::beRepaired(unsigned int amount)
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "Destructor called\n";
+	std::cout << "ClapTrap Destructor called\n";
 }
