@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 21:28:11 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/16 22:13:29 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/18 20:21:34 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 # include <iostream>
 # include <iomanip>
 # include <cmath>
-# define maxHP 10
+# define maxHP 100
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string name;
 		int healthPoints;
 		int energyPoints;
@@ -27,6 +27,7 @@ class ClapTrap
 	
 	public:
 		ClapTrap();
+		ClapTrap(std::string name, int hp, int energy, int damage);
 		ClapTrap(std::string newName);
 		ClapTrap(const ClapTrap& newObj);
 		ClapTrap& operator=(const ClapTrap& newObj);

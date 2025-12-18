@@ -6,7 +6,7 @@
 #    By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/16 21:27:07 by jeslin-tici       #+#    #+#              #
-#    Updated: 2025/12/16 21:27:48 by jeslin-tici      ###   ########.fr        #
+#    Updated: 2025/12/18 20:28:33 by jeslin-tici      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,10 @@
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-NAME	=	ClapTrap
+NAME	=	Serena
 SRC		=	main.cpp \
-			ClapTrap.cpp
+			ClapTrap.cpp \
+			ScavTrap.cpp
 
 OBJ		= $(SRC:.cpp=.o)
 
