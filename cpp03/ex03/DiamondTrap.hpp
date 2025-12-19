@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 22:00:02 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/19 19:43:38 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/19 21:44:28 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		~DiamondTrap();
 
 		void whoAmI(void);
+		void attack(const std::string& target);
+
 };
 
 #endif

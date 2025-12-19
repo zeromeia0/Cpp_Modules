@@ -6,7 +6,7 @@
 #    By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/16 21:27:07 by jeslin-tici       #+#    #+#              #
-#    Updated: 2025/12/18 20:39:21 by jeslin-tici      ###   ########.fr        #
+#    Updated: 2025/12/19 21:45:01 by jeslin-tici      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,12 @@
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-NAME	=	bored
+NAME	=	DiamondTrap
 SRC		=	main.cpp \
 			ClapTrap.cpp \
 			ScavTrap.cpp \
-			FragTrap.cpp
+			FragTrap.cpp \
+			DiamondTrap.cpp
 
 OBJ		= $(SRC:.cpp=.o)
 
