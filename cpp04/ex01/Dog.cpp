@@ -1,47 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/20 22:41:06 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/21 12:43:39 by jeslin-tici      ###   ########.fr       */
+/*   Created: 2025/12/20 22:56:56 by jeslin-tici       #+#    #+#             */
+/*   Updated: 2025/12/20 23:18:41 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Dog.hpp"
 
-Animal::Animal() : type("Animal")
+
+Dog::Dog() : Animal()
 {
-	std::cout << "Default animal constructor called\n";
+	type = "Dog";
+	std::cout << "Default Dog constructor called\n";
 }
 
-Animal::Animal(const Animal& newObj) : type("Animal")
+Dog::Dog(const Dog& newObj) : Animal()
 {
-	std::cout << "Animal copy constructor called\n";
+	type = "Dog";
+	std::cout << "Dog copy constructor called\n";
 	*this = newObj;
 }
 
-Animal& Animal::operator=(const Animal& newObj)
+Dog& Dog::operator=(const Dog& newObj)
 {
-	std::cout << "Animal copy assingment constructor called\n";
+	std::cout << "Dog copy assingment constructor called\n";
 	if (this != &newObj)
 		*this = newObj;
 	return (*this);
 }
 
-std::string Animal::getType(void) const
+void Dog::makeSound()
 {
-	return (type);
+	std::cout << "Dog said au au!\n";
 }
 
-void Animal::makeSound() const
-{
-	std::cout << "Animal said dingeringeding\n";
-}
-
-Animal::~Animal(void)
+Dog::~Dog(void)
 {
 	std::cout << "Destructor called\n";
 }
