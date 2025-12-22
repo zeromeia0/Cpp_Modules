@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 20:10:36 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/21 12:43:33 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/22 20:02:51 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Animal
 		Animal();
 		Animal(const Animal& newObj);
 		Animal& operator=(const Animal& newObj);
-		~Animal();
+		virtual ~Animal();
 		
 		std::string getType(void) const;
 		virtual void makeSound() const;

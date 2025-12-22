@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 22:56:56 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/20 23:18:23 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/22 20:00:23 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Cat& Cat::operator=(const Cat& newObj)
 {
 	std::cout << "Cat copy assingment constructor called\n";
 	if (this != &newObj)
-		*this = newObj;
+		type = newObj.type;
 	return (*this);
 }
 

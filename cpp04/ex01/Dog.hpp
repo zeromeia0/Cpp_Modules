@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 22:57:04 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/20 23:17:12 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/22 20:23:11 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define DOG_HPP
 #include "Animal.hpp"
 
-class Dog : public Animal
+class Dog : public Animal, public Brain
 {
 	public:
 		Dog();

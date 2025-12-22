@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 12:44:33 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/21 12:47:10 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/22 20:06:35 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ class Brain
 		Brain& operator=(const Brain& newObj);
 		~Brain();
 
-		void getIdea();
-		void setIdea();
+		std::string getIdea(int i);
+		void setIdea(int i, std::string idea);
 };
 
 #endif
