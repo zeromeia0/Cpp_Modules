@@ -6,41 +6,48 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 22:56:56 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/22 20:24:33 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/23 00:26:16 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Brain.hpp"
 
-Dog::Dog() : Animal(), Brain()
+Dog::Dog() : Animal(), brain()
 {
 	type = "Dog";
-	std::cout << "Default Dog constructor called\n";
 }
 
-Dog::Dog(const Dog& newObj) : Animal(), Brain(newObj.brain)
+Dog::Dog(const Dog& newObj) : Animal(), brain()
 {
 	type = "Dog";
 	
-	std::cout << "Dog copy constructor called\n";
 	*this = newObj;
+}
+
+Brain& Dog::getBrain(void)
+{
+	return (brain);
+}
+
+const Brain& Dog::getBrain(void) const
+{
+	return (brain);
 }
 
 Dog& Dog::operator=(const Dog& newObj)
 {
-	std::cout << "Dog copy assingment constructor called\n";
 	if (this != &newObj)
-		*this = newObj;
-	return (*this);
+	{
+		Animal::operator=(newObj);
+		brain = newObj.brain;
+	}
+	return *this;
 }
 
-void Dog::makeSound()
+void Dog::makeSound() const
 {
 	std::cout << "Dog said au au!\n";
 }
 
-Dog::~Dog(void)
-{
-	std::cout << "Destructor called\n";
-}
+Dog::~Dog(void) {}

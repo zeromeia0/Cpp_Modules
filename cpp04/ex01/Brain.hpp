@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 12:44:33 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/22 20:06:35 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/23 00:24:11 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 class Brain
 {
-	private:
+	protected:
 		std::string ideas[100];
 
 	public:
@@ -28,7 +28,7 @@ class Brain
 		Brain& operator=(const Brain& newObj);
 		~Brain();
 
-		std::string getIdea(int i);
+		std::string getIdea(int i) const;
 		void setIdea(int i, std::string idea);
 };
 

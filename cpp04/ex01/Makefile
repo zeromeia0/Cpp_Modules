@@ -6,7 +6,7 @@
 #    By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/16 21:27:07 by jeslin-tici       #+#    #+#              #
-#    Updated: 2025/12/21 04:21:32 by jeslin-tici      ###   ########.fr        #
+#    Updated: 2025/12/22 23:11:22 by jeslin-tici      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,8 @@ SRC		=	main.cpp \
 			Animal.cpp \
 			Cat.cpp \
 			Dog.cpp \
-			WrongAnimal.cpp \
-			WrongCat.cpp
-
+			Brain.cpp
+			
 OBJ		= $(SRC:.cpp=.o)
 
 # -->ANSI COLOR <--

@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 20:10:36 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/22 20:02:51 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/22 23:19:59 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Animal
 		
 		std::string getType(void) const;
 		virtual void makeSound() const;
+		
 };
 
 #endif

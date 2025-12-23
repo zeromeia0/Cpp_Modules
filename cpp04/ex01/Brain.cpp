@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 12:44:26 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/22 20:14:08 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/23 00:24:01 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,17 @@
 
 Brain::Brain()
 {
-	std::cout << "Default Brain constructor called" << std::endl;
 	for (int i = 0; i < 100; i++)
 		ideas[i] = "Food";
 }
 
 Brain::Brain(const Brain& newObj)
 {
-	std::cout << "Brain copy constructor called" << std::endl;
 	*this = newObj;
 }
 
 Brain& Brain::operator=(const Brain& newObj)
 {
-	std::cout << "Brain copy assignment operator called" << std::endl;
 	if (this != &newObj)
 	{
 		for (int i = 0; i < 100; i++)
@@ -36,13 +33,10 @@ Brain& Brain::operator=(const Brain& newObj)
 	return (*this);
 }
 
-std::string Brain::getIdea(int i)
+std::string Brain::getIdea(int i) const
 {
 	if (i < 0 || i >= 100)
-	{
-		std::cout << "Invalid index\n";
-		return ;
-	}
+		return ("Invalid index\n");
 	return (ideas[i]);
 }
 
@@ -56,7 +50,4 @@ void Brain::setIdea(int i, std::string idea)
 	this->ideas[i] = idea;
 }
 
-Brain::~Brain()
-{
-	std::cout << "Brain destructor called" << std::endl;
-}
+Brain::~Brain() {}
