@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 09:38:53 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/16 17:27:16 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/12 18:12:13 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main( void )
 	Fixed const b( 10 );
 	Fixed const c( 42.42f );
 	Fixed const d( b );
-	a = Fixed( 1234.4321f );
+	a = Fixed( 1234.4321f ); //why do I need to call Fixed again?
 	std::cout << "a is " << a << std::endl;
 	std::cout << "b is " << b << std::endl;
 	std::cout << "c is " << c << std::endl;

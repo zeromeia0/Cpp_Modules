@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:57:47 by beatde-a          #+#    #+#             */
-/*   Updated: 2025/12/16 22:23:47 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/12 18:19:14 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,7 @@ int main()
 {
 	ClapTrap napoleon("Napoleon");
 	napoleon.attack("the Russian czar");
-	napoleon.attack("King of Spain");
 	napoleon.attack("King of Portugal");
-	napoleon.attack("King of Prussia");
-	napoleon.attack("a very tall tree");
 	napoleon.attack("a bowl of cereal");
 	napoleon.takeDamage(8);
 	napoleon.beRepaired(2);

@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 18:16:33 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/16 21:48:18 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/12 18:14:04 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Fixed::Fixed(const int value)
 
 Fixed::Fixed(const float value)
 {
-	fixedNumber = static_cast<int>(roundf(value *(1 << bits))); //STUDY BETTER THE ROUNDF AND BITS OPERATIONS AGAIN
+	fixedNumber = static_cast<int>(roundf(value *(1 << bits)));
 }
 
 Fixed::Fixed(const Fixed& newObj)
@@ -53,7 +53,7 @@ void Fixed::setRawBits(int const raw)
 	this->fixedNumber = raw;
 }
 
-float Fixed::toFloat(void) const //remember to study this const after functions shit
+float Fixed::toFloat(void) const
 {
 	return (fixedNumber / static_cast<float>(1 << bits));
 }

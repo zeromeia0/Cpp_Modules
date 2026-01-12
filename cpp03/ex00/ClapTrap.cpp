@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 21:36:41 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/18 20:43:16 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/12 18:23:12 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ ClapTrap::ClapTrap(void) : name("Default"), healthPoints(10), energyPoints(10), 
 {
 	std::cout << "Default ClapTrap created\n";
 }
-
 
 ClapTrap::ClapTrap(std::string newName) : name(newName), healthPoints(10), energyPoints(10), attackDamage(10)
 {
@@ -55,7 +54,7 @@ void ClapTrap::attack(const std::string& target)
 		return ; 
 	}
 	energyPoints--;
-	std::cout << "ClapTrap " << this->name << " attacks " << target << " causing " << this->attackDamage << " points of damage!\n";
+	std::cout << "ClapTrap " << this->name << " attacks [" << target << "] causing " << this->attackDamage << " points of damage!\n";
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
@@ -94,7 +93,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 	else
 	{
 		healthPoints += amount;
-		std::cout << "ClapTrap " << name << " healed " << amount << " health points!\n";
+		std::cout << "ClapTrap " << name << " healed " << amount << " health points! It's current hp is: " << healthPoints << "!\n";
 	}
 }
 

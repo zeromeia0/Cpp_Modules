@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 09:39:01 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/16 21:09:21 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/12 18:11:18 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Fixed& Fixed::operator=(const Fixed& newObj)
 {
 	std::cout << "Copy assingment operator called\n";
 	if (this != &newObj)
-		this->fixedNumber = newObj.getRawBits();
+		this->fixedNumber = newObj.getRawBits(); //study shallow and deep copy
 	return (*this);
 }
 
@@ -53,9 +53,9 @@ void Fixed::setRawBits(int const raw)
 	this->fixedNumber = raw;
 }
 
-float Fixed::toFloat(void) const // study again this const after the function because wtf
+float Fixed::toFloat(void) const
 {
-	return (fixedNumber / static_cast<float>(1 << bits)); //improve bitwise operations you dumbass
+	return (fixedNumber / static_cast<float>(1 << bits));
 }
 
 int Fixed::toInt(void) const
