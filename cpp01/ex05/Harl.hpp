@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 00:01:14 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/02 18:44:26 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/12 13:39:06 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Harl{
 		void error(void);
 	public:
 		Harl() {};
-		Harl(std::string newName) : name(newName) {}
+		Harl(std::string newName) : name(newName) { std::cout << "Creating harl: " << newName << std::endl;}; //why not calling it?
 		Harl(const char *check_name);
 		~Harl() {};
 		void complain(std::string level);

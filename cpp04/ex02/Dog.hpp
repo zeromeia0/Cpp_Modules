@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/28 21:47:41 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2026/01/12 13:25:23 by jeslin-tici      ###   ########.fr       */
+/*   Created: 2025/12/20 22:57:04 by jeslin-tici       #+#    #+#             */
+/*   Updated: 2025/12/23 00:25:41 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-#define HUMANB_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-#include "Weapon.hpp"
-
-class HumanB{
+class Dog : public Animal
+{
 	private:
-		std::string name;
-		Weapon *weapon;
+		Brain brain;
 	public:
-		HumanB (const std::string newName) : name(newName), weapon(NULL) {};
-		HumanB(const std::string& newName, Weapon& thisWeapon) : name(newName), weapon(&thisWeapon) {};
-		~HumanB() {};
-		
-		void setWeapon(Weapon& weapon);
-		void attack();
-			
+		Dog();
+		Dog(const Dog& newObj);
+		Dog& operator=(const Dog& newObj);
+		~Dog();
+
+		void makeSound() const;
+		Brain& getBrain();
+		const Brain& getBrain() const;
+
 };
 
 #endif

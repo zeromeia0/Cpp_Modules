@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 12:34:05 by vvazzs            #+#    #+#             */
-/*   Updated: 2025/11/24 07:04:51 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/01/12 13:05:55 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,10 @@ std::string InputValidation(const std::string &prompt)
     while (1)
     {
         std::cout << prompt;
-        if (!std::getline(std::cin, input))
+        if (!std::getline(std::cin, input)) //comeback here at home just check stuff
         {
             if (std::cin.eof())
-            {
                 return "";
-            }
         }
         if (input.empty())
             std::cout << "Can't have empty information :D\n";
@@ -54,11 +52,17 @@ int Contact::SetInfo(void)
 {
     
     FirstName = InputValidation("Insert first name: ");
-    if (FirstName.empty()) return (0);
+    if (FirstName.empty())
+        return (0);
+
     LastName = InputValidation("Insert last name: ");
-    if (LastName.empty()) return (0);
+    if (LastName.empty())
+        return (0);
+
     Nickname = InputValidation("Insert nickname: ");
-    if (Nickname.empty()) return (0);
+    if (Nickname.empty())
+        return (0);
+
     while (1)
     {
         PhoneNumber = InputValidation("Insert phone number: ");
@@ -87,7 +91,7 @@ int Contact::SetInfo(void)
 std::string Contact::FormatBook(std::string s) const
 {
     if (s.length() > 10)
-        return s.substr(0, 9) + ".";
+        return s.substr(0, 9) + "."; //study this again
     return (s);
 }
 

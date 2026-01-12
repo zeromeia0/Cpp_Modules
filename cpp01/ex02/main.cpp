@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 18:50:17 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2025/11/25 18:59:13 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/01/12 13:20:40 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 int main(void)
 {
 	std::string str = "HI THIS IS BRAIN";
+
 	std::string *stringPTR = &str;
 	std::string &stringREF = str;
 	std::cout << "\n";

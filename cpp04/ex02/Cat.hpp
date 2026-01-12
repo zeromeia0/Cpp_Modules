@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/28 21:47:41 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2026/01/12 13:25:23 by jeslin-tici      ###   ########.fr       */
+/*   Created: 2025/12/20 22:57:04 by jeslin-tici       #+#    #+#             */
+/*   Updated: 2025/12/22 23:26:10 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-#define HUMANB_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-#include "Weapon.hpp"
-
-class HumanB{
+class Cat : public Animal
+{
 	private:
-		std::string name;
-		Weapon *weapon;
+		Brain brain;
 	public:
-		HumanB (const std::string newName) : name(newName), weapon(NULL) {};
-		HumanB(const std::string& newName, Weapon& thisWeapon) : name(newName), weapon(&thisWeapon) {};
-		~HumanB() {};
-		
-		void setWeapon(Weapon& weapon);
-		void attack();
-			
+		Cat();
+		Cat(const Cat& newObj);
+		Cat& operator=(const Cat& newObj);
+		~Cat();
+
+		void makeSound() const;
+		const Brain& getBrain() const;
 };
 
 #endif

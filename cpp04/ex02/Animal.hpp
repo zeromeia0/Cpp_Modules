@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/25 16:39:50 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/01/12 13:14:50 by jeslin-tici      ###   ########.fr       */
+/*   Created: 2025/12/20 20:10:36 by jeslin-tici       #+#    #+#             */
+/*   Updated: 2025/12/22 23:19:59 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
-# include <iomanip>
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 # include <iostream>
-# include <limits>
-# include <cstdio>
-# include <cctype>
-# include <cstdlib>
+# include <iomanip>
+# include <cmath>
 
- class Zombie{
- 	private:
- 		std::string name;
- 	public:
-		Zombie() {};
- 		Zombie(const std::string &name); //check the name of this, isnt it overload?
- 		~Zombie();
-		void setName(const std::string &name);
-		void DisplayNames(void);
- };
-	
-	Zombie* zombieHorde(int N, std::string name);	
+class Animal
+{
+	protected:
+		std::string type;
+	public:
+		Animal();
+		Animal(const Animal& newObj);
+		Animal& operator=(const Animal& newObj);
+		virtual ~Animal();
+		
+		std::string getType(void) const;
+		virtual void makeSound() const;
+		
+};
+
 #endif

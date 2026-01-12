@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 00:01:11 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/02 18:45:18 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/12 13:38:08 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ void Harl::complain(std::string level)
 {
 	if (level.empty())
 		return ;
-	void (Harl::*ptr[])(void) = {
+	void (Harl::*ptr[])(void) = //dont forget to comeback here and study + review
+	{
 		&Harl::debug,
 		&Harl::info,
 		&Harl::warning,
