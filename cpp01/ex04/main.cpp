@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 22:26:32 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2026/01/12 13:31:34 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/13 18:20:51 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,13 @@
 std::string replace_strings(std::string line, std::string s1, std::string s2)
 {
 	size_t index = 0;
-	while ((index = line.find(s1, index)) != std::string::npos) //study again line.find() and the npos();
+	while ((index = line.find(s1, index)) != std::string::npos) 
+					//result of the line.find() is assignged to index
+					//find() -> searches for substring inside a string
+					// and tells where it starts
+					// index != npos -> substring was found
+					// npos = no position (search failed)
+					
 	{
 		line.erase(index, s1.length());
 		line.insert(index, s2);
@@ -34,7 +40,7 @@ int main(int argc, char *argv[])
 		return (std::cout << "Error: [" << argv[1] << "]: File not found\n", 1);
 
 	std::string replacedName = std::string(argv[1]) + ".replace";
-	std::ofstream replacedFile(replacedName.c_str()); //remember what each std::file function do
+	std::ofstream replacedFile(replacedName.c_str());
 	std::string line;
 
 	while (std::getline(originalFile, line))
@@ -44,3 +50,12 @@ int main(int argc, char *argv[])
 	}		
 	return (0);
 }
+
+// ifstream -> pipe from file to program (read)
+// ofstream -> pipe from program to file (write)
+// std::ifstream f("file.txt");
+
+// f.is_open();     true if file opened
+// f.good();        stream is OK
+// f.fail();        last operation failed
+// f.eof();         reached end of file

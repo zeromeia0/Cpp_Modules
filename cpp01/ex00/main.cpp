@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 14:55:44 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/01/12 13:13:38 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/13 18:11:09 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int main(void)
 	std::cout << "\n";
 	
 	std::cout << "\nSummoning " << ZombieTwoName << "\n";
-	Zombie *zombie2 = newZombie(ZombieTwoName); //confirm if zombie2 is a 
-	//												reference to ZombieTwoName, 
-													//so the newZombie function 
-													//creates a new or the 
-													//reference creates a new one?
+	Zombie *zombie2 = newZombie(ZombieTwoName); //new Zombie object is created on the heap
+														// using newZombie(), that return a 
+														// zombie* (address to the object)
+														//zombie 2 is a local pointer variable
+//zombie 2 is pointint to a new zombie that was created with the newZombie() fuinction
 	if (!zombie2)
 	{
 		std::cout << "Couldn't create it somewhy\n";

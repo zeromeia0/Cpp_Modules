@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 12:34:05 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/01/12 13:05:55 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/13 18:06:03 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ std::string InputValidation(const std::string &prompt)
     while (1)
     {
         std::cout << prompt;
-        if (!std::getline(std::cin, input)) //comeback here at home just check stuff
+        if (!std::getline(std::cin, input)) //getline = gets the line from the prompt1(std::cin) and writes it into prompt2 (input)
         {
             if (std::cin.eof())
                 return "";
@@ -91,7 +91,7 @@ int Contact::SetInfo(void)
 std::string Contact::FormatBook(std::string s) const
 {
     if (s.length() > 10)
-        return s.substr(0, 9) + "."; //study this again
+        return s.substr(0, 9) + "."; // takes up 'n' characters from position 0
     return (s);
 }
 

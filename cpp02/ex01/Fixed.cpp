@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/14 09:39:01 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2026/01/12 18:11:18 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/13 18:21:47 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Fixed::Fixed(const int value)
 Fixed::Fixed(const float value)
 {
 	std::cout << "Float constructor called\n";
-	fixedNumber = static_cast<int>(roundf(value *(1 << bits))); //STUDY BETTER THE ROUNDF AND BITS OPERATIONS AGAIN
+	fixedNumber = static_cast<int>(roundf(value *(1 << bits))); //rounf rounds float to nearest int value
 }
 
 Fixed::Fixed(const Fixed& newObj)

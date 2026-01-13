@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 16:39:50 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/01/12 13:14:50 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/13 18:11:56 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
  		std::string name;
  	public:
 		Zombie() {};
- 		Zombie(const std::string &name); //check the name of this, isnt it overload?
+ 		Zombie(const std::string &name); //overload
  		~Zombie();
 		void setName(const std::string &name);
 		void DisplayNames(void);
