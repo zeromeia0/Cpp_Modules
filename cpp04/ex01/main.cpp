@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 23:04:48 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/23 00:31:51 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/17 12:14:46 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main(void)
 	{
 		std::cout << bicho[i]->getType() << std::endl;
 		bicho[i]->makeSound();
-		Cat* cat = dynamic_cast<Cat*>(bicho[i]);
+		Cat* cat = dynamic_cast<Cat*>(bicho[i]); //wtf is dynamic cast
 		if (cat)
 			std::cout << "Cat idea is: "<< cat->getBrain().getIdea(i) << std::endl;
 	

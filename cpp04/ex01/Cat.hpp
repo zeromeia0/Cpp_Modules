@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 22:57:04 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/22 23:26:10 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/17 12:13:48 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Cat : public Animal
 {
 	private:
-		Brain brain;
+		Brain brain; //wtf does this do
 	public:
 		Cat();
 		Cat(const Cat& newObj);
