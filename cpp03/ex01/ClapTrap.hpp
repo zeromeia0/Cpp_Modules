@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 21:28:11 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/18 20:21:34 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/17 11:49:05 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class ClapTrap
 {
 	protected:
 		std::string name;
-		int healthPoints;
+		int hitPoints;
 		int energyPoints;
 		int attackDamage;	
 	

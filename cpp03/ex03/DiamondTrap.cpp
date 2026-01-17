@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 21:59:53 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/19 21:43:59 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/17 11:49:05 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ DiamondTrap::DiamondTrap(std::string newName)
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& newObj)
-	: ClapTrap(newObj.name, newObj.healthPoints, newObj.energyPoints, newObj.attackDamage),
+	: ClapTrap(newObj.name, newObj.hitPoints, newObj.energyPoints, newObj.attackDamage),
 	FragTrap(), ScavTrap(), name(newObj.name)
 {
 	std::cout << "Diamond trap copy constructor called\n";

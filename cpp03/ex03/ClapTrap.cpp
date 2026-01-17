@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 21:36:41 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/19 18:08:34 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/17 11:49:05 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : name("Default"), healthPoints(10), energyPoints(10), attackDamage(10)
+ClapTrap::ClapTrap() : name("Default"), hitPoints(10), energyPoints(10), attackDamage(10)
 {
 	std::cout << "Default ClapTrap created\n";
 }
 
-ClapTrap::ClapTrap(std::string newName, int healthPoints, int energyPOints, int attackDamage)
-	: name(newName), healthPoints(healthPoints), energyPoints(energyPOints), attackDamage(attackDamage)
+ClapTrap::ClapTrap(std::string newName, int hitPoints, int energyPOints, int attackDamage)
+	: name(newName), hitPoints(hitPoints), energyPoints(energyPOints), attackDamage(attackDamage)
 {
 	std::cout << "ClapTrap parameter constructor called\n";
 }
 
-ClapTrap::ClapTrap(std::string newName) : name(newName), healthPoints(10), energyPoints(10), attackDamage(10)
+ClapTrap::ClapTrap(std::string newName) : name(newName), hitPoints(10), energyPoints(10), attackDamage(10)
 {
 	std::cout << "Creating ClapTrap called " << name << "\n";
 }
@@ -40,7 +40,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& newObj)
 	if (this != &newObj)
 	{
 		this->name = newObj.name;
-		this->healthPoints = newObj.healthPoints;
+		this->hitPoints = newObj.hitPoints;
 		this->energyPoints = newObj.energyPoints;
 		this->attackDamage = newObj.attackDamage;
 	}
@@ -49,7 +49,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& newObj)
 
 void ClapTrap::attack(const std::string& target)
 {
-	if (healthPoints <= 0)
+	if (hitPoints <= 0)
 	{
 		std::cout << "ClapTrap " << name << " is dead\n";
 		return ;
@@ -65,19 +65,19 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	healthPoints -= amount;
-	if (healthPoints <= 0)
+	hitPoints -= amount;
+	if (hitPoints <= 0)
 	{
 		std::cout << "ClapTrap " << name << " was killed in combat by taking " << amount << " of damage!\n";
 		return ;
 	}
 	else
-		std::cout << "ClapTrap " << name << " took " << amount << " of damage, and his current HP is " << healthPoints << "\n";
+		std::cout << "ClapTrap " << name << " took " << amount << " of damage, and his current HP is " << hitPoints << "\n";
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (healthPoints <= 0)
+	if (hitPoints <= 0)
 	{
 		std::cout << "ClapTrap " << name << " is dead\n";
 		return ;
@@ -90,15 +90,15 @@ void ClapTrap::beRepaired(unsigned int amount)
 	}
 
 	energyPoints--;
-	if (healthPoints + amount >= maxHP)
+	if (hitPoints + amount >= maxHP)
 	{
-		healthPoints = maxHP;
+		hitPoints = maxHP;
 		std::cout << "ClapTrap " << name << " is fully healed and ready to destroy its enemies\n";
 		return ;
 	}
 	else
 	{
-		healthPoints += amount;
+		hitPoints += amount;
 		std::cout << "ClapTrap " << name << " healed " << amount << " health points!\n";
 	}
 }

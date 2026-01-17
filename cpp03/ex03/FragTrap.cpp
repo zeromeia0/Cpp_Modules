@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 20:33:47 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/18 21:13:08 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/17 11:49:05 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void FragTrap::printInfo()
 {
-	std::cout << "Object [" << this->name << "] has [" << this->healthPoints << "] healthPoints, [" \
+	std::cout << "Object [" << this->name << "] has [" << this->hitPoints << "] hitPoints, [" \
 		<< this->energyPoints << "] energyPoints, [" << this->attackDamage << "] attackDamage\n";
 }
 

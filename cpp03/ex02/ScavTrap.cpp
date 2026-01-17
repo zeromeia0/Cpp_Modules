@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 13:15:20 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/18 21:11:54 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/17 11:49:05 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void ScavTrap::printInfo()
 {
-	std::cout << "Object [" << this->name << "] has [" << this->healthPoints << "] healthPoints, [" \
+	std::cout << "Object [" << this->name << "] has [" << this->hitPoints << "] hitPoints, [" \
 		<< this->energyPoints << "] energyPoints, [" << this->attackDamage << "] attackDamage\n";
 }
 
@@ -45,7 +45,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& newObj)
 
 void ScavTrap::attack(const std::string& target)
 {
-	if (healthPoints <= 0)
+	if (hitPoints <= 0)
 	{
 		std::cout << "ScavTrap " << name << " is dead\n";
 		return ;
