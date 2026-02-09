@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 22:57:04 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/20 23:17:12 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/17 12:02:06 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Dog : public Animal
 		Dog& operator=(const Dog& newObj);
 		~Dog();
 
-		void makeSound();
+		void makeSound() const;
 };
 
 #endif

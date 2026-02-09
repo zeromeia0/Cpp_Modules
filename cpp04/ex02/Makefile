@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+         #
+#    By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/16 21:27:07 by jeslin-tici       #+#    #+#              #
-#    Updated: 2025/12/22 23:11:22 by jeslin-tici      ###   ########.fr        #
+#    Updated: 2026/02/09 10:06:13 by vvazzs           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRC		=	main.cpp \
 			Animal.cpp \
 			Cat.cpp \
 			Dog.cpp \
-			Brain.cpp
+			Brain.cpp \
+			AAnimal.cpp
 			
 OBJ		= $(SRC:.cpp=.o)
 

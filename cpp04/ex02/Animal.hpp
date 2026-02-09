@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 20:10:36 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/22 23:19:59 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/02/09 10:03:36 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Animal
 		virtual ~Animal();
 		
 		std::string getType(void) const;
-		virtual void makeSound() const;
+		virtual void makeSound() const = 0; //object must be 100% complete to exist
 		
 };
 

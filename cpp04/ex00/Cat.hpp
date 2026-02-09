@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 22:57:04 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/21 04:21:46 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/17 12:01:45 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cat : public Animal
 		Cat& operator=(const Cat& newObj);
 		~Cat();
 
-		void makeSound();
+		void makeSound() const;
 };
 
 #endif

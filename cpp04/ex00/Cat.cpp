@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 22:56:56 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/22 20:00:23 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/17 12:01:38 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Cat& Cat::operator=(const Cat& newObj)
 	return (*this);
 }
 
-void Cat::makeSound()
+void Cat::makeSound() const
 {
 	std::cout << "Cat said meow\n";
 }

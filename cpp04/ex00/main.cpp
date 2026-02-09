@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 23:04:48 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/21 12:42:40 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/17 12:10:32 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ int main(void)
 	std::cout << bruh2->getType() << " " << std::endl;
 	bruh1->makeSound();
 	bruh2->makeSound();
+	delete(meta);
+	delete (i);
+	delete(j);
+	delete(bruh1);
+	delete(bruh2);
+	
 	return (0);
 	
 }

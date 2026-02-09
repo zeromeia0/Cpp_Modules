@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/20 22:41:06 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2026/02/09 09:55:34 by vvazzs           ###   ########.fr       */
+/*   Created: 2025/12/20 20:10:36 by jeslin-tici       #+#    #+#             */
+/*   Updated: 2026/02/09 09:59:11 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "string"
+#ifndef AANIMAL_HPP
+# define AANIMAL_HPP
+# include <iostream>
+# include <iomanip>
+# include <cmath>
 
-Animal::Animal() : type("Animal") {}
-
-Animal::Animal(const Animal& newObj) : type("Animal")
+class AAnimal
 {
-	*this = newObj;
-}
+	protected:
+		std::string type;
+	public:
+		AAnimal();
+		AAnimal(const AAnimal& newObj);
+		AAnimal& operator=(const AAnimal& newObj);
+		virtual ~AAnimal();
+		
+		virtual void makeSound() const;
+		std::string getType(void) const;
+};
 
-Animal& Animal::operator=(const Animal& newObj)
-{
-	if (this != &newObj)
-		type = newObj.type;
-	return (*this);
-}
-
-std::string Animal::getType(void) const
-{
-	return (type);
-}
-
-Animal::~Animal(void) {}
+#endif

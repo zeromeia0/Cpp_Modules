@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+         #
+#    By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/16 21:27:07 by jeslin-tici       #+#    #+#              #
-#    Updated: 2025/12/21 04:21:32 by jeslin-tici      ###   ########.fr        #
+#    Updated: 2026/01/17 12:05:16 by vvazzs           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 CC		=	c++
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CFLAGS	=	-Wall -Wextra -Werror -g -std=c++98
 
 NAME	=	Animal
 SRC		=	main.cpp \

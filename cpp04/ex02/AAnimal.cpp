@@ -1,47 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 22:41:06 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2026/02/09 09:57:20 by vvazzs           ###   ########.fr       */
+/*   Updated: 2025/12/21 12:43:39 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-Animal::Animal() : type("Animal")
+AAnimal::AAnimal() : type("AAnimal")
 {
 	std::cout << "Default animal constructor called\n";
 }
 
-Animal::Animal(const Animal& newObj) : type("Animal")
+AAnimal::AAnimal(const AAnimal& newObj) : type("AAnimal")
 {
-	std::cout << "Animal copy constructor called\n";
+	std::cout << "AAnimal copy constructor called\n";
 	*this = newObj;
 }
 
-Animal& Animal::operator=(const Animal& newObj)
+AAnimal& AAnimal::operator=(const AAnimal& newObj)
 {
-	std::cout << "Animal copy assingment constructor called\n";
+	std::cout << "AAnimal copy assingment constructor called\n";
 	if (this != &newObj)
 		*this = newObj;
 	return (*this);
 }
 
-std::string Animal::getType(void) const
+std::string AAnimal::getType(void) const
 {
 	return (type);
 }
 
-void Animal::makeSound() const
+void AAnimal::makeSound() const
 {
-	std::cout << "Animal said dingeringeding\n";
+	std::cout << "AAnimal said dingeringeding\n";
 }
 
-Animal::~Animal(void)
+AAnimal::~AAnimal(void)
 {
 	std::cout << "Destructor called\n";
 }
