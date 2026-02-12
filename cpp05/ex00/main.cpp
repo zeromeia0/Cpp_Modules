@@ -5,40 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/28 21:43:49 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2026/01/15 12:18:19 by vivaz-ca         ###   ########.fr       */
+/*   Created: 2026/02/10 17:51:34 by vivaz-ca          #+#    #+#             */
+/*   Updated: 2026/02/10 17:51:55 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <iostream>
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "Bureaucrat.hpp"
 
 int main()
 {
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-
-	Weapon club;
-	HumanB tony("Tony");
-	tony.attack();
-	tony.setWeapon(club);
-	tony.attack();
-
-	return (0);
+	
 }

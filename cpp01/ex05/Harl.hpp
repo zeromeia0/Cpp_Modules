@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 00:01:14 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2026/01/12 13:39:06 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/01/15 12:25:33 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HARL_HPP
-#define HARD_HPP
+# define HARL_HPP
 #include <iostream>
 #include <iomanip>
 
