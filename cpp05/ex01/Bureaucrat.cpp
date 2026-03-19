@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 17:51:29 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/18 22:48:50 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/03/19 13:50:02 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,12 +71,12 @@ void  Bureaucrat::incrementGrade(int n)
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return ("Grade is too high!");
+	return ("Bureaucrat Grade is too high!");
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return ("Grade is too low!");
+	return ("Bureaucrat Grade is too low!");
 }
 
 Bureaucrat::~Bureaucrat()
@@ -84,8 +84,21 @@ Bureaucrat::~Bureaucrat()
 	std::cout << "Bureaucrat destructor called" << std::endl;
 }
 
+void Bureaucrat::signForm(Form &form)
+{
+	std::cout << "Bureau signForm called\n";
+	try
+	{
+		form.beSigned(*this);
+		std::cout << _name << " signed " << form.getName() << std::endl;
+	}
+	catch (const std::exception& e)
+	{
+		std::cerr << _name << "couldn't sign " << form.getName() << " because " << e.what() << '\n';
+	}
+}
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& value)
 {
-	out << value.getName() << ", bureaucrat grade " << value.getGrade() << std::endl;
+	out << value.getName() << ", bureaucrat grade is " << value.getGrade() << std::endl;
 	return (out);
 }

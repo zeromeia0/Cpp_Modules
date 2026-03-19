@@ -6,19 +6,24 @@
 #    By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/10 17:50:58 by vivaz-ca          #+#    #+#              #
-#    Updated: 2026/03/19 11:13:02 by vivaz-ca         ###   ########.fr        #
+#    Updated: 2026/03/19 14:02:07 by vivaz-ca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-NAME	=	Maggots
+NAME	=	Lobotomy
+OBJ_DIR =	obj
 SRC		=	main.cpp \
 			Bureaucrat.cpp \
-			Form.cpp
+			AForm.cpp \
+			RobotomyRequestForm.cpp \
+			ShrubberyCreationForm.cpp \
+			PresidentialPardonForm.cpp
 			
-OBJ		= $(SRC:.cpp=.o)
+			
+OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 # -->ANSI COLOR <--
 GREEN	= \e[0;32m
@@ -30,13 +35,14 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-%.o: %.cpp
+$(OBJ_DIR)/%.o: %.cpp
+	@mkdir -p $(OBJ_DIR)
 	@echo -e "$(GREEN)Compiling $<$(RESET)"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@echo -e "$(YELLOW)Cleaning...$(RESET)"
-	@rm -f $(OBJ)
+	@rm -rf $(OBJ_DIR)
 
 fclean: clean
 	@echo -e "$(YELLOW)Removing [$(NAME)]$(RESET)"
