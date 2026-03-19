@@ -6,7 +6,7 @@
 /*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:56 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/19 15:44:17 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/03/19 15:50:10 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@
 # include <iostream>
 # include <iomanip>
 # include <cmath>
+# include "AForm.hpp"
 
-class PresidentialPardonForm
+class PresidentialPardonForm : public AForm
 {
 	private:
 		std::string _target;

@@ -6,7 +6,7 @@
 /*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:59:05 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/19 15:42:38 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/03/19 15:50:39 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@
 # include <iostream>
 # include <iomanip>
 # include <cmath>
+# include "AForm.hpp"
 
-class ShrubberyCreationForm
+class ShrubberyCreationForm : public AForm
 {
 	private:
 		std::string _target;
