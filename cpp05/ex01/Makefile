@@ -6,14 +6,14 @@
 #    By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/10 17:50:58 by vivaz-ca          #+#    #+#              #
-#    Updated: 2026/03/18 22:40:22 by vvazzs           ###   ########.fr        #
+#    Updated: 2026/03/18 22:52:55 by vvazzs           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-NAME	=	Bureuacrat
+NAME	=	Maggots
 SRC		=	main.cpp \
 			Bureaucrat.cpp
 			

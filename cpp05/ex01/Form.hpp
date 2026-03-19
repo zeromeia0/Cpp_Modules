@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 17:51:34 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/18 22:50:40 by vvazzs           ###   ########.fr       */
+/*   Created: 2026/03/18 22:53:25 by vvazzs            #+#    #+#             */
+/*   Updated: 2026/03/18 22:57:02 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef FORM_HPP
+# define FORM_HPP
 
-int main()
+# include <iostream>
+# include <iomanip>
+# include <cmath>
+
+class Form
 {
-	try
-	{
-		Bureaucrat walter("Walter1", 12);
-		Bureaucrat silva;
-		std::cout << walter;
-		std::cout << silva;
-	}
-	catch (const std::exception& e)
-	{
-		std::cout << "Exception caught: " << e.what() << std::endl;
-	}
-}
+	private:
+		const std::string _name;
+		bool _isSigned;
+		const int _signGrade;
+		const int _execGrade;
+	public:
+		Form();
+		Form(const Form& newObj);
+		Form& operator=(const Form& newObj);
+		~Form();
+};
+
+#endif
