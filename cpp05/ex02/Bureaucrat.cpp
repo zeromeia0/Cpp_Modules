@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:49 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/19 13:58:50 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/03/20 10:31:23 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"   // ✅ ADD THIS
 
 Bureaucrat::Bureaucrat()
 {
@@ -30,6 +31,26 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& newObj)
 	if (this != &newObj)
 		*this = newObj;
 	return (*this);
+}
+
+int Bureaucrat::getGrade() const
+{
+	return (_grade);
+}
+
+std::string Bureaucrat::getName() const
+{
+	return (_name);
+}
+
+void Bureaucrat::executeForm(AForm const & form) const {
+    try {
+        form.execute(*this);
+        std::cout << _name << " executed " << form.getName() << std::endl;
+    } catch (std::exception & e) {
+        std::cout << _name << " couldn't execute " << form.getName()
+                  << " because " << e.what() << std::endl;
+    }
 }
 
 Bureaucrat::~Bureaucrat()

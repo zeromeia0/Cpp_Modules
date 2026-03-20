@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:56 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/19 15:50:10 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/03/20 10:14:36 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class PresidentialPardonForm : public AForm
 {
 	private:
 		std::string _target;
+	protected:
+		void execute(Bureaucrat const & executor) const;
 	public:
 		PresidentialPardonForm();
 		PresidentialPardonForm(std::string target);
