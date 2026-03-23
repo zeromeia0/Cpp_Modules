@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 14:17:28 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/23 16:18:22 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/03/23 20:34:21 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <iomanip>
 # include <cmath>
 # include <exception>
+# include <sstream>
+# include <cmath>
+#include <math.h>
 // std::stringstream ss(str);
 // ss >> i -> string to int
 // ss >> d -> string to double
@@ -41,8 +44,13 @@ class ScalarConverter
 		ScalarConverter(const ScalarConverter& newObj);
 		ScalarConverter& operator=(const ScalarConverter& newObj);
 		~ScalarConverter();
-		e_type getType(const std::string &input);
-
+		static e_type getType(const std::string &input);
+		static int viniAtoi(const std::string& input);
+		static float viniAtof(const std::string& input);
+		static double viniAtod(const std::string& input);
+		static void printCharInt(double value);
+		static void printFloatDouble(double value);
+		static bool handlePseudoLiterals(const std::string &input);
 		class HandleEndgeCases : public std::exception
 		{
 			public:
