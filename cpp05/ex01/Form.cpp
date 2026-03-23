@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 22:53:23 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/03/20 09:35:34 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/03/23 16:07:56 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ const char* Form::GradeTooHighException::what() const throw()
 	return ("Form Grade is too high!");
 }
 
-const char* Form::GradeTooLowException::what() const throw()
+const char* Form::GradeTooHLowException::what() const throw()
 {
 	return ("Form Grade is too low!");
 }
