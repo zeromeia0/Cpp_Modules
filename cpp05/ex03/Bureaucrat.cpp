@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:49 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/20 10:31:23 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/03/23 14:00:50 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 Bureaucrat::Bureaucrat()
 {
 	std::cout << "Default Bureaucrat constructor called" << std::endl;
+}
+
+Bureaucrat::Bureaucrat(std::string name, int grade)
+{
+	_name = name;
+	_grade = grade;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& newObj)
@@ -51,6 +57,16 @@ void Bureaucrat::executeForm(AForm const & form) const {
         std::cout << _name << " couldn't execute " << form.getName()
                   << " because " << e.what() << std::endl;
     }
+}
+
+const char* Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return ("Bureaucrat Grade is too high!");
+}
+
+const char* Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return ("Bureaucrat Grade is too low!");
 }
 
 Bureaucrat::~Bureaucrat()

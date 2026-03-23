@@ -5,8 +5,11 @@
 # include <iostream>
 # include <iomanip>
 # include <cmath>
-#include "AForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
+class AForm;
 class Intern
 {
 	public:
@@ -15,6 +18,9 @@ class Intern
 		Intern& operator=(const Intern& newObj);
 		~Intern();
 		AForm* makeForm(std::string formName, std::string target);
+		AForm *makeShrubberyCreationForm(std::string target);
+		AForm *makeRobotomyRequestForm(std::string target);
+		AForm *makePresidentialPardonForm(std::string target);
 };
 
 #endif

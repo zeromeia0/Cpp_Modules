@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:47 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/20 10:38:53 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/03/23 14:03:11 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class AForm
 		AForm();
 		AForm(const AForm& newObj);
 		AForm& operator=(const AForm& newObj);
-		~AForm();
+		virtual ~AForm();
 		std::string getName() const;
 		virtual void execute(Bureaucrat const & executor) const = 0;
 		

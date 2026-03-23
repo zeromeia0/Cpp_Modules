@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:43 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/20 10:40:08 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/03/23 13:46:59 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ AForm::AForm()
 AForm::AForm(std::string name, std::string target, int signGrade, int execGrade) 
     : _name(name), _isSigned(false), _signGrade(signGrade), _execGrade(execGrade)
 {
-    (void)target; // If AForm doesn't have a _target member, void it or add one
+    (void)target;
+	(void)_signGrade;
     if (signGrade < 1 || execGrade < 1)
         throw AForm::GradeTooHighException();
     if (signGrade > 150 || execGrade > 150)

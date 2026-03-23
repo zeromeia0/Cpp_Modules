@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:51 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/20 10:28:08 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/03/23 14:00:37 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,27 @@ class AForm;
 class Bureaucrat
 {
 	private:
-		const std::string _name;
+		std::string _name;
 		int _grade;
 	public:
 		Bureaucrat();
+		Bureaucrat(std::string name, int grade);
 		Bureaucrat(const Bureaucrat& newObj);
 		Bureaucrat& operator=(const Bureaucrat& newObj);
 		~Bureaucrat();
 		int getGrade() const;
 		std::string getName() const;
 		void executeForm(AForm const & form) const;
+		class GradeTooHighException : public std::exception
+		{
+			public:
+				const char* what() const throw();
+		};
+		class GradeTooLowException : public std::exception
+		{
+			public:
+				const char* what() const throw();
+		};
 };
 
 #endif

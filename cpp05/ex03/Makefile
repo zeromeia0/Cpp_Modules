@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+         #
+#    By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/10 17:50:58 by vivaz-ca          #+#    #+#              #
-#    Updated: 2026/03/20 10:46:58 by vvazzs           ###   ########.fr        #
+#    Updated: 2026/03/23 14:04:49 by vivaz-ca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-NAME	=	Lobotomy
+NAME	=	UnpaidIntern
 OBJ_DIR =	obj
 SRC		=	main.cpp \
 			Bureaucrat.cpp \
