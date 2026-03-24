@@ -8,7 +8,6 @@ void iter(T const * array, const unsigned int length, void (*f)(T const &))
 {
 	if (!array || !f)
 		return;
-
 	for (unsigned int i = 0; i < length; ++i)
 		f(array[i]);
 };
