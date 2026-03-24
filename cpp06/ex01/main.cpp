@@ -22,6 +22,5 @@ int main()
 		std::cout << "dblValue: " << dataPtr->dblValue << "	\n";
 		std::cout << "strValue: " << dataPtr->strValue << "	\n";
 	}
-
-	return 0;
+	return (0);
 }

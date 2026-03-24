@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 23:11:50 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/16 21:09:20 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/03/24 09:53:04 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Fixed& Fixed::operator=(const Fixed& newObj)
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called\n";
+	std::cout << "getRawBits member ftion called\n";
 	return (this->fixedNumber);
 }
 void Fixed::setRawBits(int const raw)

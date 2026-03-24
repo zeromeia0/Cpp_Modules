@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 18:16:33 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2026/01/12 18:14:04 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/03/24 09:53:04 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Fixed& Fixed::operator=(const Fixed& newObj)
 	return (*this);
 }
 
-//=====MEMBER FUNCTIONS======
+//=====MEMBER fTIONS======
 
 int Fixed::getRawBits(void) const
 {

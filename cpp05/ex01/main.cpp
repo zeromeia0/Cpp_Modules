@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 17:51:34 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/19 13:51:40 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/03/24 09:53:04 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ void printHeader(const std::string& title)
 }
 
 // Generic test runner with exception handling
-void runTest(void (*testFunc)(), const std::string& name)
+void runTest(void (*testf)(), const std::string& name)
 {
 	printHeader(name);
 	try
 	{
-		testFunc();
+		testf();
 	}
 	catch (const std::exception& e)
 	{

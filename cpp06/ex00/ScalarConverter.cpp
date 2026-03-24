@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 14:17:26 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/23 20:36:05 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/03/24 09:53:04 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -222,7 +222,7 @@ ScalarConverter::~ScalarConverter()
 }
 
 
-// vou deixar essa funcao aqui pq ficou mt foda
+// vou deixar essa fao aqui pq ficou mt foda
 // void ScalarConverter::convert(const std::string &input)
 // {
 // 	try

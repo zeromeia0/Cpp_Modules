@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 14:17:28 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/23 20:34:21 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/03/24 09:53:04 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 // std::stringstream ss(str);
 // ss >> i -> string to int
 // ss >> d -> string to double
-// or convert it to c-tyle functions
+// or convert it to c-tyle ftions
 // std::atoi and atof
 // char* end;
 // 
