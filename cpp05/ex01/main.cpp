@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 17:51:34 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/24 09:53:04 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/03/30 10:29:20 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
-// Utility to print section headers
 void printHeader(const std::string& title)
 {
 	std::cout << "\n--- " << title << " ---\n";
 }
 
-// Generic test runner with exception handling
 void runTest(void (*testf)(), const std::string& name)
 {
 	printHeader(name);
@@ -34,8 +32,6 @@ void runTest(void (*testf)(), const std::string& name)
 		std::cout << "Exception caught: " << e.what() << std::endl;
 	}
 }
-
-// ---------------- TESTS ----------------
 
 void testBureaucrat()
 {
@@ -57,8 +53,8 @@ void testForm()
 
 void testInteraction()
 {
-	Bureaucrat bureau;
-	Form form;
+	Bureaucrat bureau("Lucas", 34);
+	Form form("Xavier", false, 60, 60);
 
 	std::cout << bureau;
 	std::cout << form;
@@ -69,13 +65,12 @@ void testInteraction()
 	std::cout << bureau;
 	std::cout << form;
 
+	std::cout << "Decrementing [" << bureau.getName() << "] grade...\n";
 	for (int i = 0; i < 5; i++)
 		bureau.decrementGrade(1);
 
 	std::cout << bureau;
 }
-
-// ---------------- MAIN ----------------
 
 int main()
 {
