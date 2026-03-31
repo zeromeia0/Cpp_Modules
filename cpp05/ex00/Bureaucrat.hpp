@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 17:51:31 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/18 22:43:10 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/03/31 13:26:28 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 class Bureaucrat
 {
 	private :
-		std::string	_name;
+		const std::string	_name;
 		int 		_grade;
 	public:
 		Bureaucrat();

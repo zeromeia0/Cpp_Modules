@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 17:51:29 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/18 22:48:50 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/03/31 13:30:27 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ Bureaucrat::Bureaucrat() : _name("Default"), _grade(67)
 	std::cout << "Default Bureaucrat constructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string newName, int newGrade)
+Bureaucrat::Bureaucrat(std::string newName, int newGrade) : _name(newName)
 {
-	this->_name = newName;
 	if (newGrade < HIGHEST_POSSIBLE)
 		throw GradeTooHighException();
 	if (newGrade > LOWEST_POSSIBLE)
@@ -40,7 +39,6 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& newObj)
 	if (this != &newObj)
 	{
 		this->_grade = newObj._grade;
-		this->_name = newObj._name;
 	}
 	return (*this);
 }

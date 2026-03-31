@@ -6,7 +6,7 @@
 /*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 17:51:31 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/19 13:43:21 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/03/31 13:30:51 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Form;
 class Bureaucrat
 {
 	private :
-		std::string	_name;
+		const std::string	_name;
 		int 		_grade;
 	public:
 		Bureaucrat();
