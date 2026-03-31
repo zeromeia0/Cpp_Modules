@@ -1,10 +1,9 @@
 
 #include "Span.hpp"
 
-Span::Span()
-{
-	std::cout << "Default Span constructor called" << std::endl;
-}
+Span::Span() : _numOfIntegers(0){}
+
+Span::Span(unsigned int integers) : _numOfIntegers(integers) {}
 
 Span::Span(const Span& newObj)
 {

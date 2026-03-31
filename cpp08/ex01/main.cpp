@@ -1,35 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Span.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/31 14:06:31 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/31 14:06:48 by vivaz-ca         ###   ########.fr       */
+/*   Created: 2026/03/31 14:04:48 by vivaz-ca          #+#    #+#             */
+/*   Updated: 2026/03/31 14:04:53 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SPAN_HPP
-# define SPAN_HPP
+#include "Span.hpp"
 
-# include <iostream>
-# include <iomanip>
-# include <cmath>
-
-class Span
-{
-	private:
-		unsigned int _numOfIntegers;
-	public:
-		Span();
-		Span(unsigned int integers);
-		void addNumber(int n);
-		void shortestSpan();
-		void longestSpan();
-		Span(const Span& newObj);
-		Span& operator=(const Span& newObj);
-		~Span();
-};
-
-#endif
