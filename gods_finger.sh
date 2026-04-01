@@ -30,7 +30,12 @@ cat > "$HPP_FILE" << EOF
 # include <iostream>
 # include <iomanip>
 # include <cmath>
-
+# include <vector>
+# include <map>
+# include <list>
+# include <algorithm>
+# include <exception>
+# include <deque>
 class ${CLASS_NAME}
 {
 	public:

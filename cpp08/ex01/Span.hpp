@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:06:31 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/31 14:06:48 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/04/01 01:40:50 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,37 @@
 # include <iostream>
 # include <iomanip>
 # include <cmath>
+# include <vector>
+# include <map>
+# include <list>
+# include <algorithm>
+# include <exception>
+# include <deque>
 
 class Span
 {
 	private:
-		unsigned int _numOfIntegers;
+		unsigned int _maxSize;
+		std::vector<int> _numbers;
 	public:
 		Span();
 		Span(unsigned int integers);
-		void addNumber(int n);
-		void shortestSpan();
-		void longestSpan();
 		Span(const Span& newObj);
 		Span& operator=(const Span& newObj);
 		~Span();
+		void addNumber(int n);
+		int shortestSpan();
+		int longestSpan();
+		template <typename Iterator>
+		void addInRange(Iterator first, Iterator last)
+		{
+			for (; first != last; ++first)
+			{
+				if (_numbers.size() >= _maxSize)
+					throw std::length_error("Container is full");
+				_numbers.push_back(*first);
+			}
+		}
 };
 
 #endif

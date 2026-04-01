@@ -5,17 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/04/01 01:25:34 by vvazzs            #+#    #+#              #
-#    Updated: 2026/04/01 01:25:40 by vvazzs           ###   ########.fr        #
+#    Created: 2026/04/01 01:25:21 by vvazzs            #+#    #+#              #
+#    Updated: 2026/04/01 01:25:22 by vvazzs           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-NAME	=	easyfind
+NAME	=	Span
 OBJ_DIR =	obj
 SRC		=	main.cpp \
+			Span.cpp			
 			
 OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 

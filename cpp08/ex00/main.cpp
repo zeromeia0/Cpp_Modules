@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 10:14:32 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/03/31 10:40:11 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/01 01:23:44 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int main()
 
 	int arr_d[] = { 76, 53, -4, 0, 33 };
 	printSection("TESTING WITH DEQUE");
-	std::deque<int> d(arr_d, arr_d + 5);
+	std::deque<int> d(arr_d, arr_d + 5); //study later
 	print_container(d);
 	find_it(d, 0);
 	find_it(d, 76);
