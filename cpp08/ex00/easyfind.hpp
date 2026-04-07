@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 10:13:26 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/03/31 10:36:15 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/07 13:36:15 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 #include <algorithm>
 #include <exception>
 #include <deque> //container that allows fast insertion and removal at both ends
+    // mix between dynamic array (vector) and a queue
 
 template <typename T>
 typename T::iterator easyfind(T& container, int value)

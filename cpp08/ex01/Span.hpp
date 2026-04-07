@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:06:31 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/04/01 01:40:50 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/07 13:37:37 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ class Span
 			for (; first != last; ++first)
 			{
 				if (_numbers.size() >= _maxSize)
-					throw std::length_error("Container is full");
-				_numbers.push_back(*first);
+					throw (std::length_error("Container is full"));
+				_numbers.push_back(*first); // at the end
 			}
 		}
 };
