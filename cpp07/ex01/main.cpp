@@ -11,14 +11,14 @@ class Awesome
     }
     int get( void ) const
     {
-      return this->_number;
+      return (this->_number);
     }
 };
 
 std::ostream & operator<<( std::ostream & out, Awesome const & rhs )
 {
   out << rhs.get();
-  return out;
+  return (out);
 }
 
 template< typename T > 

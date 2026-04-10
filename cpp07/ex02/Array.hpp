@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 11:29:16 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/03/24 11:29:17 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/10 11:35:15 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Array
 		Array& operator=(const Array& other)
 		{
 			if (this == &other)
-				return *this;
+				return (*this);
 
 			T* new_array = new T[other._size]();
 
@@ -45,26 +45,26 @@ class Array
 			_array = new_array;
 			_size = other._size;
 
-			return *this;
+			return (*this);
 		}
 		class OutOfBoundsException : public std::exception
 		{
 			public:
-				virtual const char* what() const throw() { return "Index out of bounds"; }
+				virtual const char* what() const throw() { return ("Index out of bounds"); }
 		};
 		T& operator[](unsigned int index)
 		{
 			if (index >= _size)
 				throw OutOfBoundsException();
-			return _array[index];
+			return (_array[index]);
 		}
 		const T& operator[](unsigned int index) const
 		{
 			if (index >= _size)
 				throw OutOfBoundsException();
-			return _array[index];
+			return (_array[index]);
 		}
-		unsigned int size() const { return _size; }
+		unsigned int size() const { return (_size); }
 };
 
 #endif

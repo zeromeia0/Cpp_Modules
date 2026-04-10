@@ -69,13 +69,13 @@ Base* generate()
 	switch (std::rand() % 3)
 	{
 		case 0:
-			return new (std::nothrow) A();
+			return (new (std::nothrow) A());
 		case 1:
-			return new (std::nothrow) B();
+			return (new (std::nothrow) B());
 		case 2:
-			return new (std::nothrow) C();
+			return (new (std::nothrow) C());
 		default:
-			return NULL;
+			return (NULL);
 	}
 }
 
@@ -84,13 +84,17 @@ int main()
 	std::srand(std::time(NULL));
 	printSection("Generating Four Objects");
 	Base *ptr1 = generate();
+	std::cout << "Finished generating test 0..." << std::endl;
 	Base *ptr2 = generate();
+	std::cout << "Finished generating test 1..." << std::endl;
 	Base *ptr3 = generate();
+	std::cout << "Finished generating test 2..." << std::endl;
 	Base *ptr4 = generate();
+	std::cout << "Finished generating test 3..." << std::endl;
 	if (!ptr1 || !ptr2 || !ptr3 || !ptr4)
 	{
 		std::cerr << "Error generating new object\n";
-		return 1;
+		return (1);
 	}
 	printSection("Identifying Object 1");
 	identify(ptr1);
