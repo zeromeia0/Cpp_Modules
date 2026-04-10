@@ -6,18 +6,7 @@
 
 int main(void)
 {
-    std::cout << "===== TEST 1: Grade Too Low for Constructor =====" << std::endl;
-    try
-    {
-        ShrubberyCreationForm badForm("Nowhere");
-        AForm *tooLow = new ShrubberyCreationForm("Garden");
-        (void)tooLow;
-    }
-    catch (std::exception &e)
-    {
-        std::cout << "Caught expected Constructor Error: " << e.what() << std::endl;
-    }
-    std::cout << "\n===== TEST 2: Unsigned Form Execution =====" << std::endl;
+    std::cout << "\n===== TEST 1: Unsigned Form Execution =====" << std::endl;
     try
     {
         Bureaucrat boss("Martin", 150);
@@ -31,7 +20,7 @@ int main(void)
     {
         std::cout << "Main caught: " << e.what() << std::endl;
     }
-    std::cout << "\n===== TEST 3: Robotomy drilling (Failure/Success) =====" << std::endl;
+    std::cout << "\n===== TEST 2: Robotomy drilling (Failure/Success) =====" << std::endl;
     std::srand(std::time(NULL));
     try
     {
@@ -45,7 +34,7 @@ int main(void)
     {
         std::cout << "Main caught: " << e.what() << std::endl;
     }
-    std::cout << "\n===== TEST 4: Copying and Assignment =====" << std::endl;
+    std::cout << "\n===== TEST 3: Copying and Assignment =====" << std::endl;
     try
     {
         PresidentialPardonForm original("Ford Prefect");

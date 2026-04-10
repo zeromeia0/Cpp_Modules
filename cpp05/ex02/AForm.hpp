@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:47 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/04/10 08:29:23 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/10 09:08:49 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class AForm
 		AForm();
 		AForm(const AForm& newObj);
 		AForm& operator=(const AForm& newObj);
-		~AForm();
+		virtual ~AForm();
 		std::string getName() const;
 		void beSigned(const Bureaucrat& bureau);
 		virtual void execute(Bureaucrat const & executor) const = 0;

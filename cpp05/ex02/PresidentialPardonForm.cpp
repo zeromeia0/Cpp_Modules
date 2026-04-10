@@ -6,14 +6,16 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:54 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/04/10 08:35:01 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/10 09:14:45 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target) : AForm("PresidentialPardonForm", target, 25, 5), _target("Default target")
+PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm", "Default Tarfet", 25, 5), _target("Default target") {};
+
+PresidentialPardonForm::PresidentialPardonForm(std::string target) : AForm("PresidentialPardonForm", target, 25, 5), _target(target)
 {
 	std::cout << "Default PresidentialPardonForm constructor called" << std::endl;
 }

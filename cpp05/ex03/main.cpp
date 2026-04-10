@@ -11,7 +11,7 @@ void sign_and_execute(Bureaucrat &a, AForm *f)
 		return ;
 	a.signForm(*f);
 	a.executeForm(*f);
-	delete f;
+	delete (f);
 }
 
 void test_forms(std::string b_name, int b_grade, std::string target)

@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+         #
+#    By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/10 17:50:58 by vivaz-ca          #+#    #+#              #
-#    Updated: 2026/03/19 14:02:07 by vivaz-ca         ###   ########.fr        #
+#    Updated: 2026/04/10 09:09:33 by vvazzs           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		=	c++
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CFLAGS	=	-Wall -Wextra -Werror -g -std=c++98
 
 NAME	=	Lobotomy
 OBJ_DIR =	obj
@@ -49,7 +49,7 @@ fclean: clean
 	@rm -f $(NAME)
 
 val: re
-	@valgrind --leak-check=full ./$(NAME)
+	@clear && valgrind --leak-check=full ./$(NAME)
 
 re: fclean all
 
