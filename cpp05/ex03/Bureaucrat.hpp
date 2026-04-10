@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:51 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/23 14:00:37 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/04/10 08:18:35 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@
 # include <iostream>
 # include <iomanip>
 # include <cmath>
+#define HIGHEST_POSSIBLE 1
+#define LOWEST_POSSIBLE 150
 
 class AForm;
 class Bureaucrat
 {
 	private:
-		std::string _name;
+		const std::string _name;
 		int _grade;
 	public:
 		Bureaucrat();
@@ -32,7 +34,9 @@ class Bureaucrat
 		~Bureaucrat();
 		int getGrade() const;
 		std::string getName() const;
-		void executeForm(AForm const & form) const;
+		void incrementGrade(int n);
+		void decrementGrade(int n);
+		void signForm(AForm& form);
 		class GradeTooHighException : public std::exception
 		{
 			public:
@@ -43,6 +47,7 @@ class Bureaucrat
 			public:
 				const char* what() const throw();
 		};
+		void executeForm(AForm const & form) const;
 };
 
 #endif

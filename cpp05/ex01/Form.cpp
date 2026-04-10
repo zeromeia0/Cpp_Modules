@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 22:53:23 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/03/30 10:25:33 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/10 08:20:34 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Form::Form(std::string newName, bool newIsSigned, int newSignGrade, int newExecG
     if (newSignGrade < 1 || newExecGrade < 1)
         throw GradeTooHighException();
     if (newSignGrade > 150 || newExecGrade > 150)
-        throw GradeTooHLowException();
+        throw GradeTooLowException();
 }
 
 Form::Form(const Form& newObj) : 
@@ -48,7 +48,7 @@ const char* Form::GradeTooHighException::what() const throw()
 	return ("Form Grade is too high!");
 }
 
-const char* Form::GradeTooHLowException::what() const throw()
+const char* Form::GradeTooLowException::what() const throw()
 {
 	return ("Form Grade is too low!");
 }
@@ -76,7 +76,7 @@ int Form::getSignedBool() const
 void Form::beSigned(const Bureaucrat& bureau)
 {
     if (bureau.getGrade() > _signGrade)
-        throw GradeTooHLowException();
+        throw GradeTooLowException();
     _isSigned = true;
 }
 

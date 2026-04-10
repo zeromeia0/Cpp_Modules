@@ -9,7 +9,7 @@ void sign_and_execute(Bureaucrat &a, AForm *f)
 {
 	if (f == NULL)
 		return ;
-	a.executeForm(*f);
+	a.signForm(*f);
 	a.executeForm(*f);
 	delete f;
 }

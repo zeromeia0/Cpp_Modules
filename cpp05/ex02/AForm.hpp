@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:47 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/20 10:38:53 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/10 08:29:23 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <iomanip>
 # include <cmath>
 # include <fstream>
+#include <ctime>
+#include <cstdlib>
 
 class Bureaucrat;
 
@@ -38,6 +40,7 @@ class AForm
 		AForm& operator=(const AForm& newObj);
 		~AForm();
 		std::string getName() const;
+		void beSigned(const Bureaucrat& bureau);
 		virtual void execute(Bureaucrat const & executor) const = 0;
 		
 		class GradeTooHighException : public std::exception

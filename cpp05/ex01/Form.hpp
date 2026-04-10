@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 22:53:25 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/03/20 09:10:11 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/10 08:20:34 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ class Form
 			public:
 				const char* what() const throw();
 		};
-		class GradeTooHLowException : public std::exception
+		class GradeTooLowException : public std::exception
 		{
 			public:
 				const char* what() const throw();

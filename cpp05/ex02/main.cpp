@@ -20,8 +20,9 @@ int main(void)
     std::cout << "\n===== TEST 2: Unsigned Form Execution =====" << std::endl;
     try
     {
-        Bureaucrat boss;
+        Bureaucrat boss("Martin", 150);
         ShrubberyCreationForm shrub("Backyard");
+        boss.signForm(shrub);
 
         std::cout << "Bureaucrat " << boss.getName() << " attempting to execute..." << std::endl;
         boss.executeForm(shrub); 
@@ -31,12 +32,16 @@ int main(void)
         std::cout << "Main caught: " << e.what() << std::endl;
     }
     std::cout << "\n===== TEST 3: Robotomy drilling (Failure/Success) =====" << std::endl;
+    std::srand(std::time(NULL));
     try
     {
-        Bureaucrat worker;
+        Bureaucrat worker("Karl Max", 1);
         RobotomyRequestForm rob("Bender");
         worker.executeForm(rob);
-    } catch (std::exception &e)
+        worker.signForm(rob);
+        worker.executeForm(rob);
+    }
+    catch (const std::exception &e)
     {
         std::cout << "Main caught: " << e.what() << std::endl;
     }
@@ -46,7 +51,8 @@ int main(void)
         PresidentialPardonForm original("Ford Prefect");
         PresidentialPardonForm copy(original);
         
-        Bureaucrat president;
+        Bureaucrat president("Nolan", 1);
+        president.signForm(copy);
         president.executeForm(copy);
     } catch (std::exception &e)
     {

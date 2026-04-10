@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:54 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/20 10:44:37 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/10 08:35:01 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const {
     checkExecution(executor);
 
-    std::cout << _target << " has been pardoned by the holy form\n";
+    std::cout << "[ " << _target << "] has been pardoned by the holy form\n";
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()
