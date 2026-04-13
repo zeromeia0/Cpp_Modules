@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+         #
+#    By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/01 01:25:21 by vvazzs            #+#    #+#              #
-#    Updated: 2026/04/01 14:45:03 by vvazzs           ###   ########.fr        #
+#    Updated: 2026/04/13 16:49:50 by vivaz-ca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC		=	c++
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CXX		=	c++
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 NAME	=	x-man
 OBJ_DIR =	obj
@@ -27,12 +27,12 @@ RESET	= \e[0m
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJ_DIR)
 	@echo -e "$(GREEN)Compiling $<$(RESET)"
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	@echo -e "$(YELLOW)Cleaning...$(RESET)"

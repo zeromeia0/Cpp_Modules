@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 22:53:25 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/04/10 08:20:34 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/13 16:51:18 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,11 @@ class Form
 				const char* what() const throw();
 		};
 		class GradeTooLowException : public std::exception
+		{
+			public:
+				const char* what() const throw();
+		};
+		class alreadySignedException : public std::exception
 		{
 			public:
 				const char* what() const throw();

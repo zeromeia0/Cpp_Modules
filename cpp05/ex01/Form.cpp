@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 22:53:23 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/04/10 08:20:34 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/13 17:00:04 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,17 @@ Form& Form::operator=(const Form& newObj)
 
 const char* Form::GradeTooHighException::what() const throw()
 {
-	return ("Form Grade is too high!");
+	return ("[Form Grade is too high!]");
 }
 
 const char* Form::GradeTooLowException::what() const throw()
 {
-	return ("Form Grade is too low!");
+	return ("[Form Grade is too low!]");
+}
+
+const char* Form::alreadySignedException::what() const throw()
+{
+	return ("[Form already signed]");
 }
 
 std::string Form::getName() const
@@ -76,7 +81,9 @@ int Form::getSignedBool() const
 void Form::beSigned(const Bureaucrat& bureau)
 {
     if (bureau.getGrade() > _signGrade)
-        throw GradeTooLowException();
+        {throw GradeTooLowException();}
+	if (_isSigned == true)
+		throw alreadySignedException();
     _isSigned = true;
 }
 

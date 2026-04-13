@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 12:57:39 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2026/01/12 12:57:40 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/04/13 16:49:32 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cctype>
+#include <CXXtype>
 #include <iostream>
 
 int main(int argc, char *argv[])

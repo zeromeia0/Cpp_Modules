@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 12:23:01 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/01/12 13:09:43 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/04/13 16:49:32 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <cstdlib>
 #include <limits>
 #include <cstdio>
-#include <cctype>
+#include <CXXtype>
 #include "Contact.hpp"
 
 class PhoneBook

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 12:34:05 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/01/13 18:06:03 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/13 16:49:32 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
-#include <cctype>
+#include <CXXtype>
 
 int    StrIsDigit(std::string s)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 16:39:50 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/01/13 18:11:56 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/13 16:49:32 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include <limits>
 # include <cstdio>
-# include <cctype>
+# include <CXXtype>
 # include <cstdlib>
 
  class Zombie{

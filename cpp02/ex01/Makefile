@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+         #
+#    By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 23:58:40 by vvazzs            #+#    #+#              #
-#    Updated: 2025/12/14 09:38:33 by jeslin-tici      ###   ########.fr        #
+#    Updated: 2026/04/13 16:49:50 by vivaz-ca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC		=	c++
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CXX		=	c++
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 NAME	=	fixed
 SRC		=	main.cpp \
@@ -27,11 +27,11 @@ RESET	= \e[0m
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.cpp
 	@echo -e "$(GREEN)Compiling $<$(RESET)"
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	@echo -e "$(YELLOW)Cleaning...$(RESET)"

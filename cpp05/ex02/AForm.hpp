@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:47 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/04/10 09:08:49 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/13 16:53:30 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,11 @@ class AForm
 				const char* what() const throw();
 		};
 		class FormNotSignedException : public std::exception
+		{
+			public:
+				const char* what() const throw();
+		};
+		class alreadySignedException : public std::exception
 		{
 			public:
 				const char* what() const throw();

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:43 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/04/10 08:37:50 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/13 16:52:22 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ void AForm::beSigned(const Bureaucrat& bureau)
 {
     if (bureau.getGrade() > _signGrade)
         throw GradeTooLowException();
+	if (_isSigned)
+		throw alreadySignedException();
     _isSigned = true;
 }
 

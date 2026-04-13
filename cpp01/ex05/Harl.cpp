@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 00:01:11 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2026/01/12 13:38:08 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2026/04/13 16:49:32 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void Harl::warning(void)
 
 void Harl::error(void)
 {
-	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
+	std::cout << "This is unaCXXeptable! I want to speak to the manager now." << std::endl;
 }
 
 void Harl::complain(std::string level)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:58 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/04/10 09:13:58 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/13 16:49:32 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	checkExecution(executor);
 	std::cout << "* drilling noises *\n";
     if (rand() % 2)
-        std::cout << _target << " has been robotomized successfully\n";
+        std::cout << _target << " has been robotomized suCXXessfully\n";
     else
         std::cout << "Robotomy failed\n";
 }

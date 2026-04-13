@@ -6,12 +6,12 @@
 #    By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/10 17:50:58 by vivaz-ca          #+#    #+#              #
-#    Updated: 2026/03/23 14:04:49 by vivaz-ca         ###   ########.fr        #
+#    Updated: 2026/04/13 16:49:50 by vivaz-ca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC		=	c++
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CXX		=	c++
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 NAME	=	UnpaidIntern
 OBJ_DIR =	obj
@@ -34,12 +34,12 @@ RESET	= \e[0m
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJ_DIR)
 	@echo -e "$(GREEN)Compiling $<$(RESET)"
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	@echo -e "$(YELLOW)Cleaning...$(RESET)"

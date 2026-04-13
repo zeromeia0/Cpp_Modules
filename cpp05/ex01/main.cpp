@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 17:51:34 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/30 10:29:20 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/13 16:58:33 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,9 @@ void testInteraction()
 	std::cout << bureau;
 	std::cout << form;
 
-	form.beSigned(bureau);
 	bureau.signForm(form);
+	bureau.signForm(form);
+	
 
 	std::cout << bureau;
 	std::cout << form;
@@ -74,8 +75,8 @@ void testInteraction()
 
 int main()
 {
-	runTest(testBureaucrat, "Testing Bureaucrat");
-	runTest(testForm, "Testing Form");
+	// runTest(testBureaucrat, "Testing Bureaucrat");
+	// runTest(testForm, "Testing Form");
 	runTest(testInteraction, "Testing Interaction");
 
 	std::cout << "\nFinished testing\n";

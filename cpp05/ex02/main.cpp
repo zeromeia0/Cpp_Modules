@@ -20,7 +20,7 @@ int main(void)
     {
         std::cout << "Main caught: " << e.what() << std::endl;
     }
-    std::cout << "\n===== TEST 2: Robotomy drilling (Failure/Success) =====" << std::endl;
+    std::cout << "\n===== TEST 2: Robotomy drilling (Failure/SuCXXess) =====" << std::endl;
     std::srand(std::time(NULL));
     try
     {
