@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 22:53:23 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/04/13 17:00:04 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/04/14 16:49:01 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
-
+#include "Bureaucrat.hpp"
 Form::Form() : _name("Default"), _isSigned(false), _signGrade(70), _execGrade(69)
 {
 	std::cout << "Default Form constructor called" << std::endl;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 17:51:34 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/04/13 16:58:33 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/04/14 16:49:47 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ void testInteraction()
 	std::cout << form;
 
 	bureau.signForm(form);
+	std::cout << "Trying to sign [" << form.getName() << "] again" << std::endl;
 	bureau.signForm(form);
-	
 
 	std::cout << bureau;
 	std::cout << form;

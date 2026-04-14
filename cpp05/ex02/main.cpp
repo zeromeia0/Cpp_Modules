@@ -11,7 +11,7 @@ int main(void)
     {
         Bureaucrat boss("Martin", 150);
         ShrubberyCreationForm shrub("Backyard");
-        boss.signForm(shrub);
+        // boss.signForm(shrub);
 
         std::cout << "Bureaucrat " << boss.getName() << " attempting to execute..." << std::endl;
         boss.executeForm(shrub); 
@@ -20,7 +20,7 @@ int main(void)
     {
         std::cout << "Main caught: " << e.what() << std::endl;
     }
-    std::cout << "\n===== TEST 2: Robotomy drilling (Failure/SuCXXess) =====" << std::endl;
+    std::cout << "\n===== TEST 2: Robotomy drilling (Failure/Success) =====" << std::endl;
     std::srand(std::time(NULL));
     try
     {
@@ -34,7 +34,20 @@ int main(void)
     {
         std::cout << "Main caught: " << e.what() << std::endl;
     }
-    std::cout << "\n===== TEST 3: Copying and Assignment =====" << std::endl;
+    std::cout << "\n===== TEST 4: Double Sign =====" << std::endl;
+    try
+    {
+        Bureaucrat boss("Martin", 1);
+        ShrubberyCreationForm shrub("Backyard");
+        boss.signForm(shrub);
+        std::cout << "Trying to sign again..." << std::endl;
+        boss.signForm(shrub);
+    }
+    catch (std::exception &e)
+    {
+        std::cout << "Main caught: " << e.what() << std::endl;
+    }
+    std::cout << "\n===== TEST 5: Copying and Assignment =====" << std::endl;
     try
     {
         PresidentialPardonForm original("Ford Prefect");

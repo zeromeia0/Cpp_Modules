@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:54 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/04/10 09:14:45 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/14 16:58:19 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target) : AForm("PresidentialPardonForm", target, 25, 5), _target(target)
 {
-	std::cout << "Default PresidentialPardonForm constructor called" << std::endl;
+	std::cout << "PresidentialPardonForm constructor called" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& newObj) : AForm(newObj)

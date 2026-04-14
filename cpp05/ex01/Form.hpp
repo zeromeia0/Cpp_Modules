@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 22:53:25 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/04/13 16:51:18 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/04/14 16:48:52 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@
 # include <iostream>
 # include <iomanip>
 # include <cmath>
-# include "Bureaucrat.hpp"
 
 class Bureaucrat;
-
 class Form
 {
 	private:

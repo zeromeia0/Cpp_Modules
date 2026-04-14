@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 13:58:43 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/04/13 16:52:22 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/04/14 17:01:55 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,11 @@ const char* AForm::FormNotSignedException::what() const throw()
 	return ("Formed not signed\n");
 }
 
+const char* AForm::alreadySignedException::what() const throw()
+{
+	return (" [Form already signed]");
+}
+
 std::string AForm::getName() const
 {
 	return (_name);
@@ -83,7 +88,7 @@ void AForm::checkExecution(Bureaucrat const & executor) const {
 void AForm::beSigned(const Bureaucrat& bureau)
 {
     if (bureau.getGrade() > _signGrade)
-        throw GradeTooLowException();
+        {throw GradeTooLowException();}
 	if (_isSigned)
 		throw alreadySignedException();
     _isSigned = true;
