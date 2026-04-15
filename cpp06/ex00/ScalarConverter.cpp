@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 14:17:26 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/03/24 09:53:04 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/15 18:45:15 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int ScalarConverter::viniAtoi(const std::string& input)
 	int value;
 	ss >> value;
 	if (ss.fail() || !ss.eof())
-		throw ScalarConverter::HandleEndgeCases();
+		throw (ScalarConverter::HandleEndgeCases());
 	return (value);
 }
 
@@ -89,7 +89,7 @@ float ScalarConverter::viniAtof(const std::string& input)
 	float value;
 	ss >> value;
 	if (ss.fail())
-		throw ScalarConverter::HandleEndgeCases();
+		throw (ScalarConverter::HandleEndgeCases());
 	return (value);
 }
 
@@ -99,7 +99,7 @@ double ScalarConverter::viniAtod(const std::string& input)
 	double value;
 	ss >> value;
 	if (ss.fail())
-		throw ScalarConverter::HandleEndgeCases();
+		throw (ScalarConverter::HandleEndgeCases());
 	return (value);
 }
 
@@ -220,64 +220,3 @@ ScalarConverter::~ScalarConverter()
 {
 	std::cout << "ScalarConverter destructor called" << std::endl;
 }
-
-
-// vou deixar essa fao aqui pq ficou mt foda
-// void ScalarConverter::convert(const std::string &input)
-// {
-// 	try
-// 	{
-// 		e_type type = getType(input);
-
-// 		switch (type)
-// 		{
-// 			case CHAR:
-// 			{
-// 				char c = input[0];
-// 				std::cout << "char: '" << c << "'" << std::endl;
-// 				std::cout << "int: " << static_cast<int>(c) << std::endl;
-// 				std::cout << "float: " << static_cast<float>(c) << "f" << std::endl;
-// 				std::cout << "double: " << static_cast<double>(c) << std::endl;
-// 				break;
-// 			}
-// 			case INT:
-// 			{
-// 				int i = viniAtoi(input);
-// 				if (i < 0 || i > 127)
-// 					throw HandleEndgeCases();
-
-// 				std::cout << "char: '" << static_cast<char>(i) << "'" << std::endl;
-// 				std::cout << "int: " << i << std::endl;
-// 				std::cout << "float: " << static_cast<float>(i) << "f" << std::endl;
-// 				std::cout << "double: " << static_cast<double>(i) << std::endl;
-// 				break;
-// 			}
-// 			case FLOAT:
-// 			{
-// 				std::string tmp = input.substr(0, input.length() - 1); // tem que tirar o 'f' animal
-// 				float f = viniAtof(tmp);
-// 				std::cout << "char: " << static_cast<char>(f) << std::endl;
-// 				std::cout << "int: " << static_cast<int>(f) << std::endl;
-// 				std::cout << "float: " << f << "f" << std::endl;
-// 				std::cout << "double: " << static_cast<double>(f) << std::endl;
-// 				break;
-// 			}
-// 			case DOUBLE:
-// 			{
-// 				double d = viniAtod(input);
-// 				std::cout << "double: " << d << std::endl;
-// 				break;
-// 			}
-// 			default:
-// 				throw HandleEndgeCases();
-// 		}
-// 	}
-// 	catch (const HandleEndgeCases& e)
-// 	{
-// 		std::cout << e.what();
-// 	}
-// 	catch (const std::exception& e)
-// 	{
-// 		std::cout << "Standard exception: " << e.what() << std::endl;
-// 	}
-// }
