@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 14:17:26 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/04/15 18:45:15 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/04/15 18:51:11 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,7 +169,7 @@ void ScalarConverter::convert(const std::string &input)
 			case CHAR:
 			{
 				char c = input[0];
-				double value = static_cast<double>(c);
+				double value = static_cast<double>(c); //remember to study static_cast
 				if (!isprint(c))
 					std::cout << "char: Non displayable" << std::endl;
 				else

@@ -17,26 +17,26 @@ static void printSection(const std::string& title)
 		<< std::string(width, '=') << '\n';
 }
 
-void identify(Base& ref)
+void identify(Base& p)
 {
 	std::cout << "Actual type based on reference: ";
 	try
 	{
-		(void)dynamic_cast<A&>(ref);
+		(void)dynamic_cast<A&>(p); //void doesn't care about result, only if failed or not
 		std::cout << "A\n";
 		return;
 	}
-	catch (const std::exception&) {}
+	catch (const std::exception&) {} //dynamic_cast + reference throws exception if it fails
 	try
 	{
-		(void)dynamic_cast<B&>(ref);
+		(void)dynamic_cast<B&>(p);
 		std::cout << "B\n";
 		return;
 	}
 	catch (const std::exception&) {}
 	try
 	{
-		(void)dynamic_cast<C&>(ref);
+		(void)dynamic_cast<C&>(p);
 		std::cout << "C\n";
 		return;
 	}
@@ -46,25 +46,25 @@ void identify(Base& ref)
 	}
 }
 
-void identify(Base* ptr)
+void identify(Base* p)
 {
 	std::cout << "Actual type based on pointer: ";
-	if (!ptr)
+	if (!p)
 	{
 		std::cerr << "Error: null pointer\n";
 		return;
 	}
-	if (dynamic_cast<A*>(ptr))
+	if (dynamic_cast<A*>(p))
 		std::cout << "A\n";
-	else if (dynamic_cast<B*>(ptr))
+	else if (dynamic_cast<B*>(p))
 		std::cout << "B\n";
-	else if (dynamic_cast<C*>(ptr))
+	else if (dynamic_cast<C*>(p))
 		std::cout << "C\n";
 	else
 		std::cerr << "unknown\n";
 }
 
-Base* generate()
+Base* generate(void)
 {
 	switch (std::rand() % 3)
 	{
@@ -77,6 +77,11 @@ Base* generate()
 		default:
 			return (NULL);
 	}
+}
+
+Base* invalid(void)
+{
+	return (NULL);
 }
 
 int main()
@@ -108,9 +113,14 @@ int main()
 	printSection("Identifying Object 4");
 	identify(ptr4);
 	identify(*ptr4);
+	printSection("Identifying Invalid Object");
+	Base* final_ptr = invalid();
+	identify(*final_ptr);
+	identify(final_ptr);
 	delete (ptr1);
 	delete (ptr2);
 	delete (ptr3);
 	delete (ptr4);
+	delete (final_ptr);
 	return (0);
 }
