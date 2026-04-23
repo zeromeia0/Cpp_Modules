@@ -24,7 +24,7 @@ void iter(T* array, const unsigned int length, void (*f)(T &))
 template< typename T > 
 void print( T& x ) 
 {
-  std::cout << x << std::endl;
+  std::cout << "Value = [" << x << ']' << std::endl;
   return;
 }
 
