@@ -21,4 +21,11 @@ void iter(T* array, const unsigned int length, void (*f)(T &))
 		f(array[i]);
 };
 
+template< typename T > 
+void print( T& x ) 
+{
+  std::cout << x << std::endl;
+  return;
+}
+
 #endif
