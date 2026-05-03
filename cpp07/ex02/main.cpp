@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 11:29:29 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/04/25 10:29:50 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/05/02 09:22:27 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int main()
         std::cerr << "Caught exception: " << e.what() << std::endl;
     }
 
-	
+
 	std::cout << "==== Testing with string array ====\n";
 	Array<std::string> strArray(3);
 	strArray[0] = "Hello";
@@ -70,7 +70,7 @@ int main()
         std::cerr << "Caught exception: " << e.what() << std::endl;
     }
 
-	
+
 	std::cout << "==== Testing with unsigned int array ====\n";
 	Array<unsigned int> UnIntArray(5);
 	for (unsigned int i = 0; i < UnIntArray.size(); i++)
@@ -105,6 +105,6 @@ int main()
 	{
 		std::cout << "Error: " << e.what() << std::endl;
 	}
-	
+
 	return (0);
 }

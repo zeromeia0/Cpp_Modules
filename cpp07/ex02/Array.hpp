@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 11:29:16 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/04/10 11:35:15 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/05/03 16:51:57 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,14 @@ class Array
 		T* _array;
 		unsigned int _size;
 	public:
-		Array() : _array(0), _size(0) {}
-		Array(unsigned int n) : _array(new T[n]()), _size(n) {}
-		Array(const Array& other) : _array(new T[other._size]()), _size(other._size)
+		Array() : _array(0), _size(0) {} //default constructor incomplete
+		Array(unsigned int n) : _array(new T[n]()), _size(n) {} //default empty constructor
+		Array(const Array& other) : _array(new T[other._size]()), _size(other._size) //default copy constructor
 		{
 			for (unsigned int i = 0; i < _size; ++i)
 				_array[i] = other._array[i];
 		}
-		~Array() { delete[] _array; }
-
-		Array& operator=(const Array& other)
+		Array& operator=(const Array& other) //copy assingment
 		{
 			if (this == &other)
 				return (*this);
@@ -47,6 +45,7 @@ class Array
 
 			return (*this);
 		}
+		~Array() { delete[] _array; }
 		class OutOfBoundsException : public std::exception
 		{
 			public:
