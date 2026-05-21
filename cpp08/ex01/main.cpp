@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:04:48 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/04/01 01:43:29 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/05/21 09:43:56 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void runTest(const std::string& title, void (*testFunc)())
 void testDefault()
 {
     Span test1;
-    test1.addNumber(3); //shouldn't work
+    test1.addNumber(3); //shouldn't work cuz size = 0
 }
 
 void testBasic()
@@ -62,14 +62,35 @@ void testBasic()
 
 void testLarge()
 {
-    int ammount = 1000;
-    Span big(ammount);
+    int amount = 10000;
+    Span big(amount);
     std::vector<int> v;
-    for (int i = 0; i < ammount; i++)
-        v.push_back(rand()); //study this
+    for (int i = 0; i < amount; i++)
+        v.push_back(rand());
     big.addInRange(v.begin(), v.end());
     std::cout << "Shortest: " << big.shortestSpan() << std::endl;
     std::cout << "Longest : " << big.longestSpan() << std::endl;
+}
+
+void testSameNumbers()
+{
+    
+    Span edge(3);
+    edge.addNumber(-5);
+    edge.addNumber(-5);
+    edge.addNumber(-5);
+    std::cout << "Shortest span: " << edge.shortestSpan() << std::endl;
+    std::cout << "BIggest span: " << edge.longestSpan() << std::endl;
+}
+
+void testFilled()
+{
+    Span fill(4);
+    fill.addNumber(4);
+    fill.addNumber(4);
+    fill.addNumber(4);
+    fill.addNumber(4);
+    fill.addNumber(4);
 }
 
 int main()
@@ -77,5 +98,7 @@ int main()
     runTest("Testing Default Constructor", testDefault);
     runTest("Testing Basic Functionality", testBasic);
     runTest("Testing Large Dataset", testLarge);
+    runTest("Running Edge Cases", testSameNumbers);
+    runTest("Running Filled Span", testFilled);
     return (0);
 }

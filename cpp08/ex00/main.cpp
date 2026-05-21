@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 10:14:32 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/04/01 01:23:44 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/05/21 09:24:27 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,24 +48,24 @@ void find_it(const T& container, int value)
 int main()
 {
 	int arr_v[] = { 42, 3, -7, 21, 78 };
-	printSection("TESTING WITH VECTOR");
 	std::vector<int> v(arr_v, arr_v + 5);
+	printSection("TESTING WITH VECTOR");
 	print_container(v);
 	find_it(v, -7);
 	find_it(v, 78);
 	find_it(v, 2);
 
 	int arr_l[] = { 18, -34, 13, 89, 61 };
-	printSection("TESTING WITH LIST");
 	std::list<int> l(arr_l, arr_l + 5);
+	printSection("TESTING WITH LIST");
 	print_container(l);
 	find_it(l, 13);
 	find_it(l, -34);
 	find_it(l, 81);
 
 	int arr_d[] = { 76, 53, -4, 0, 33 };
-	printSection("TESTING WITH DEQUE");
 	std::deque<int> d(arr_d, arr_d + 5); //study later
+	printSection("TESTING WITH DEQUE");
 	print_container(d);
 	find_it(d, 0);
 	find_it(d, 76);

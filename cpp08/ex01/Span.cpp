@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 01:17:18 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/04/01 01:23:20 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/05/21 09:34:02 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ Span::Span(const Span& newObj)
 Span& Span::operator=(const Span& newObj)
 {
 	if (this != &newObj)
-		*this = newObj;
+	{
+        this->_maxSize = newObj._maxSize;
+		this->_numbers = newObj._numbers;
+	}
 	return (*this);
 }
 
@@ -41,7 +44,7 @@ int Span::shortestSpan()
         throw std::runtime_error("Not enough elements");
     std::vector<int> temp = _numbers;
     std::sort(temp.begin(), temp.end());
-    int minSpan = temp[1] - temp[0]; //study later
+    int minSpan = temp[1] - temp[0];
     for (size_t i = 1; i < temp.size() - 1; i++)
 	{
         int diff = temp[i + 1] - temp[i];
