@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 10:13:26 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/04/07 13:36:15 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/06/02 05:19:35 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,25 +22,23 @@
 #include <exception>
 #include <deque> //container that allows fast insertion and removal at both ends
     // mix between dynamic array (vector) and a queue
-
+    //const_iterator is a type defined by container
 template <typename T>
 typename T::iterator easyfind(T& container, int value)
-            //must be iterator because it points to elements inside container regardless of data type and container
 {
     typename T::iterator it = std::find(container.begin(), container.end(), value);
     if (it == container.end())
         throw std::runtime_error("Value not found");
-    return (it);
+    return it;
 }
 
 template <typename T>
 typename T::const_iterator easyfind(const T& container, int value)
-            //must be iterator because it points to elements inside container regardless of data type and container
 {
     typename T::const_iterator it = std::find(container.begin(), container.end(), value);
     if (it == container.end())
         throw std::runtime_error("Value not found");
-    return (it);
+    return it;
 }
 
 #endif

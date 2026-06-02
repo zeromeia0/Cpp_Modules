@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 10:14:32 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/05/21 09:24:27 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/06/02 05:31:48 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ void find_it(const T& container, int value)
 {
     try 
     {
+		if (container.empty())
+			throw (std::runtime_error("Empty container"));
         if (easyfind(container, value) != container.end())
             std::cout << "Value " << value << " found.\n";
     }
@@ -70,4 +72,17 @@ int main()
 	find_it(d, 0);
 	find_it(d, 76);
 	find_it(d, 30);
+	
+	int arr_con[] = {0, 5, 9, 12};
+	const std::vector<int> c(arr_con, arr_con + 4);
+	printSection("Testing with const T");
+	print_container(c);
+	find_it(c, 2);
+	find_it(c, 9);
+	find_it(c, 7);
+
+	const std::list<int> nu;
+	printSection("Testing with NULL");
+	print_container(nu);
+	find_it(nu, 7);
 }

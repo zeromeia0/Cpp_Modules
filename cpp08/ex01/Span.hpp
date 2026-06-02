@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:06:31 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/05/21 09:32:05 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/06/02 05:36:45 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,11 @@ class Span
 				_numbers.push_back(*first); // at the end
 			}
 		}
+		class SpanFullException : public std::exception
+		{
+			public:
+				const char* what() const throw();
+		};
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 01:17:18 by vvazzs            #+#    #+#             */
-/*   Updated: 2026/05/21 09:34:02 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/06/02 05:42:49 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,29 @@ Span& Span::operator=(const Span& newObj)
 	return (*this);
 }
 
+const char* Span::SpanFullException::what() const throw()
+{
+    return ("[Span is full]");    
+}
+
 void Span::addNumber(int n)
 {
-    if (_numbers.size() >= _maxSize)
-        throw std::runtime_error("Span is full");
-    _numbers.push_back(n);
+    try
+    {
+        if (_numbers.size() >= _maxSize)
+            throw (SpanFullException());
+        _numbers.push_back(n);
+    }
+    catch (const std::exception& e)
+    {
+        std::cout << "Exception caught: " << e.what() << std::endl;
+    }
 }
 
 int Span::shortestSpan()
 {
     if (_numbers.size() < 2)
-        throw std::runtime_error("Not enough elements");
+        throw (std::runtime_error("Not enough elements"));
     std::vector<int> temp = _numbers;
     std::sort(temp.begin(), temp.end());
     int minSpan = temp[1] - temp[0];
