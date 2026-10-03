@@ -23,30 +23,6 @@ void printSection(const std::string& title)
 		<< std::string(width, '=') << '\n';
 }
 
-template <typename T>
-void print_container(const T& container)
-{
-	for (typename T::const_iterator n = container.begin(); n != container.end(); ++n)
-		std::cout << *n << ' ';
-	std::cout << '\n';
-}
-
-template <typename T>
-void find_it(const T& container, int value)
-{
-    try 
-    {
-		if (container.empty())
-			throw (std::runtime_error("Empty container"));
-        if (easyfind(container, value) != container.end())
-            std::cout << "Value " << value << " found.\n";
-    }
-    catch (const std::exception& e)
-    {
-        std::cout << "Value " << value << " not found (Exception: " << e.what() << ")\n";
-    }
-}
-
 int main()
 {
 	int arr_v[] = { 42, 3, -7, 21, 78 };

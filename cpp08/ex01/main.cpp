@@ -33,11 +33,11 @@ void runTest(const std::string& title, void (*testFunc)())
     try
     {
         testFunc();
-        std::cout << "✅ Test passed\n";
+        std::cout << ":D Test passed\n";
     }
     catch (const std::exception& e)
     {
-        std::cout << "❌ Error: (" << e.what() << ")\n";
+        std::cout << ">:( Error: (" << e.what() << ")\n";
     }
 }
 
@@ -95,10 +95,11 @@ void testFilled()
 
 int main()
 {
+    srand(time(NULL));
     runTest("Testing Default Constructor", testDefault);
-    runTest("Testing Basic Functionality", testBasic);
-    runTest("Testing Large Dataset", testLarge);
-    runTest("Running Edge Cases", testSameNumbers);
-    runTest("Running Filled Span", testFilled);
+    runTest("Testing Basic Stuff", testBasic);
+    runTest("Testing Large", testLarge);
+    runTest("Testing Edge Cases", testSameNumbers);
+    runTest("Testing Filled Span", testFilled);
     return (0);
 }
