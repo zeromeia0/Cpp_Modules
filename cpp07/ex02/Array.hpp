@@ -25,24 +25,35 @@ class Array
 		Array(unsigned int n) : _array(new T[n]()), _size(n) {} //default empty constructor
 		Array(const Array& other) : _array(new T[other._size]()), _size(other._size) //default copy constructor
 		{
-			for (unsigned int i = 0; i < _size; ++i)
-				_array[i] = other._array[i];
+			try
+			{
+				for (unsigned int i = 0; i < _size; ++i)
+					_array[i] = other._array[i];
+			}
+			catch (...)
+			{
+				delete[] _array;
+				throw;
+			}
 		}
 		Array& operator=(const Array& other) //copy assingment
 		{
 			if (this == &other)
 				return (*this);
-
 			T* new_array = new T[other._size]();
-
-			for (unsigned int i = 0; i < other._size; ++i)
-				new_array[i] = other._array[i];
-
+			try
+			{
+				for (unsigned int i = 0; i < other._size; ++i)
+					new_array[i] = other._array[i];
+			}
+			catch (...)
+			{
+				delete[] new_array;
+				throw;
+			}
 			delete[] _array;
-
 			_array = new_array;
 			_size = other._size;
-
 			return (*this);
 		}
 		~Array() { delete[] _array; }
@@ -60,6 +71,18 @@ class Array
 		const T& operator[](unsigned int index) const
 		{
 			if (index >= _size)
+				throw OutOfBoundsException();
+			return (_array[index]);
+		}
+		T& operator[](int index)
+		{
+			if (index >= _size || index < 0)
+				throw OutOfBoundsException();
+			return (_array[index]);
+		}
+		const T& operator[](int index) const
+		{
+			if (index >= _size || index < 0)
 				throw OutOfBoundsException();
 			return (_array[index]);
 		}

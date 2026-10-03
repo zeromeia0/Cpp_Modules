@@ -21,14 +21,13 @@ void subject(void)
 	{
 		std::cout << "====Tring the subject shit====" << std::endl;
 		int* a = new int();
-		std::cout << *a << std::endl;
+		std::cout << "New array default: " << *a << std::endl;
 		delete(a);
 	}
 	catch(std::exception& e)
 	{
 		std::cout << "Error: " << e.what() << std::endl;
 	}
-	std::cout << "====Finished testing subject shit====" << std::endl;	
 }
 int main()
 {

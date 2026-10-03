@@ -80,7 +80,7 @@ int main()
 		iter(tab, len, print<int>);
 		std::cout << std::endl;
 	}
-  std::cout << "========== TEST 7: Smaller Len ==========" << std::endl;
+	std::cout << "========== TEST 7: Smaller Len ==========" << std::endl;
 	{
 		int tab[] = {6, 7, 6, 9, 0};
 		const int len = 5;
@@ -88,7 +88,7 @@ int main()
 		iter(tab, len, print<int>);
 		std::cout << std::endl;
 	}
-  std::cout << "========== TEST 8: Bigger Len ==========" << std::endl;
+	std::cout << "========== TEST 8: Bigger Len ==========" << std::endl;
 	{
 		int tab[] = {6, 7, 6, 0};
 		const int len = 5;
@@ -96,7 +96,7 @@ int main()
 		iter(tab, len, print<int>);
 		std::cout << std::endl;
 	}
-  std::cout << "========== TEST 9: Char type ==========" << std::endl;
+	std::cout << "========== TEST 9: Char type ==========" << std::endl;
 	{
 		char tab[] = {'a', 'b', 'c', 'd', 'e'};
 		const int len = 5;
@@ -104,7 +104,7 @@ int main()
 		iter(tab, len, print<char>);
 		std::cout << std::endl;
 	}
-  std::cout << "========== TEST 10: Unsidned Char type ==========" << std::endl;
+	std::cout << "========== TEST 10: Unsidned Char type ==========" << std::endl;
 	{
 		char tab[] = {-32, -5, -128, -75};
 		const int len = 5;
@@ -112,7 +112,7 @@ int main()
 		iter(tab, len, print<char>);
 		std::cout << std::endl;
 	}
-  std::cout << "========== TEST 11: Const Unsidned Char type ==========" << std::endl;
+	std::cout << "========== TEST 11: Const Unsidned Char type ==========" << std::endl;
 	{
 		const char tab[] = {-32, -5, -128, -75};
 		const int len = 5;
@@ -120,7 +120,7 @@ int main()
 		iter(tab, len, print<const char>);
 		std::cout << std::endl;
 	}
-  std::cout << "========== TEST 11: Bool Type ==========" << std::endl;
+	std::cout << "========== TEST 11: Bool Type ==========" << std::endl;
 	{
 		// bool tab[] = {};
 		bool tab[] = {true, false, false, true, true};
@@ -129,7 +129,7 @@ int main()
 		iter(tab, len, print<bool>);
 		std::cout << std::endl;
 	}
-  std::cout << "========== TEST 12: String ==========" << std::endl;
+	std::cout << "========== TEST 12: String ==========" << std::endl;
 	{
 		std::string tab[] = {"Please", "Gimme", "a", "Red", "Pen", "Siinamota"};
 		const int len = 6;
@@ -137,9 +137,21 @@ int main()
 		iter(tab, len, print<std::string>);
 		std::cout << std::endl;
 	}
-  std::cout << "========== TEST 13: Null String ==========" << std::endl;
-  try
-  {
+	std::cout << "========== TEST 13: Negative Len ==========" << std::endl;
+	try
+	{
+		std::string tab[] = {"Testing", "Negative", "Number", "In", "Lengh", ":)"};
+		const int len = -6;
+		iter(tab, len, print<std::string>);
+		std::cout << "[OK] couldn't work because negative len";
+		std::cout << std::endl;
+	}
+	catch (std::exception & e)
+	{
+		std::cout << "Error in Negative Len" << std::endl;
+	}
+	std::cout << "========== TEST 14: Null String ==========" << std::endl;
+	try
     {
       std::string tab[] = {NULL};
       const int len = 6;
@@ -147,11 +159,9 @@ int main()
       iter(tab, len, print<std::string>);
       std::cout << std::endl;
     }
-  }
-  catch (std::exception &)
-  {
+	catch (std::exception &)
+  	{
       std::cout << "Error" << std::endl;
-  }
-
+	}
 	return (0);
 }
