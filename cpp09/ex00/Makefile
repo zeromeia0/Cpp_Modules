@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/04/01 01:25:21 by vvazzs            #+#    #+#              #
-#    Updated: 2026/06/03 08:20:04 by vvazzs           ###   ########.fr        #
+#    Created: 0026/04/01 01:25:21 by azzs              #+#    #+#              #
+#    Updated: 2026/10/06 00:53:29 by vvazzs           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 NAME	=	btc
 OBJ_DIR =	obj
 SRC		=	main.cpp \
+			BitcoinExchange.cpp
 			
 OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
