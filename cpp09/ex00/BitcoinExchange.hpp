@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vivaz-ca <vivaz-ca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 00:37:48 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/10/06 01:06:48 by vvazzs           ###   ########.fr       */
+/*   Updated: 2026/10/07 13:51:15 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,16 @@
 #include <string>
 #include <sstream>
 #include <cctype>
+
+class BitcoinExchange
+{
+    private:
+        std::map<std::string, float> _database;
+    public:
+        BitcoinExchange();
+        ~BitcoinExchange();
+        void loadDatabase(const std::string &file);
+        float getRate(const std::string &date) const;
+};
 
 #endif
