@@ -6,7 +6,7 @@
 /*   By: vivaz-ca <vivaz-ca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 00:37:19 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/10/07 13:56:37 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/10/07 14:12:21 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,22 @@ void BitcoinExchange::loadDatabase(const std::string &file)
 {
     std::ifstream file_s(file.c_str());
     if (!file_s)
-        throw (std::runtime_error("Error: can't open database"));
+        throw std::runtime_error("Error: can't open database");
     std::string line;
-    std::getline(file_s, line); //_database["2011-01-07] = 32
+    std::getline(file_s, line);
+    while (std::getline(file_s, line))
+    {
+        std::string::size_type pos = line.find(',');
+        if (pos == std::string::npos)
+            continue;
+        std::string date = line.substr(0, pos);
+        std::string value = line.substr(pos + 1);
+        float rate;
+        std::stringstream ss(value);
+        if (!(ss >> rate))
+            continue;
+        _database[date] = rate;
+    }
 }
 
 float BitcoinExchange::getRate(const std::string &date) const

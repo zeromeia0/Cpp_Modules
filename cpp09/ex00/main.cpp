@@ -6,7 +6,7 @@
 /*   By: vivaz-ca <vivaz-ca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 00:33:50 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/10/07 14:00:27 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/10/07 14:20:06 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,31 +68,47 @@ void parseInputAdvanced(std::string &file, BitcoinExchange &btc)
     std::ifstream file_s(file.c_str());
     std::string line;
 
-    if (file_s.peek() == EOF) //check this shit out
+    if (file_s.peek() == EOF)
         throw std::runtime_error("Error: empty file O.o");
-    std::getline(file_s, line); //header dealer
-    if (line != "date | value")
-        throw (std::runtime_error("Error: invalid header."));
+
+    // skip header
+    std::getline(file_s, line);
+
     while (std::getline(file_s, line))
     {
         try
         {
             std::string::size_type pos = line.find(" | ");
+
             if (pos == std::string::npos)
-                throw (std::runtime_error("Error: bad input => " + line));
+                throw std::runtime_error("Error: bad input => " + line);
+
             std::string date = line.substr(0, pos);
             std::string value = line.substr(pos + 3);
+
             if (!validDate(date))
-                throw (std::runtime_error("Error: bad input => " + line));
+                throw std::runtime_error("Error: bad input => " + line);
+
             float number;
+
             if (!validValue(value, number))
-                throw (std::runtime_error("Error: bad input => " + line));
+                throw std::runtime_error("Error: bad input => " + line);
+
             if (number < 0)
-                throw (std::runtime_error("Error: not a positive number."));
+                throw std::runtime_error("Error: not a positive number.");
+
             if (number > 1000)
-                throw (std::runtime_error("Error: too large a number."));
+                throw std::runtime_error("Error: too large a number.");
+
             float rate = btc.getRate(date);
-            std::cout << date << " => " << number << " = " << number * rate << std::endl;
+
+            std::cout
+                << date
+                << " => "
+                << number
+                << " = "
+                << number * rate
+                << std::endl;
         }
         catch (const std::exception &e)
         {
@@ -117,5 +133,6 @@ int main(int argc, char *argv[])
     {
         std::cerr << e.what() << std::endl;
     }
+    std::cout << "===== FINISHED =====" << std::endl;
     return (0);
 }

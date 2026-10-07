@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 0026/04/01 01:25:21 by azzs              #+#    #+#              #
-#    Updated: 2026/10/06 00:53:29 by vvazzs           ###   ########.fr        #
+#                                                          :::      ::::::::   #
+#   Makefile                                             :+:      :+:    :+:   #
+#                                                      +:+ +:+         +:+     #
+#   By: vivaz-ca <vivaz-ca@student.42lisboa.com>     +#+  +:+       +#+        #
+#                                                  +#+#+#+#+#+   +#+           #
+#   Created: 0026/04/01 01:25:21 by #                   #+#    #+#             #
+#   Updated: 2026/10/07 14:19:38 by vivaz-ca           ###   ########.fr       #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,10 +42,22 @@ clean:
 fclean: clean
 	@echo -e "$(YELLOW)Removing [$(NAME)]$(RESET)"
 	@rm -f $(NAME)
+	@if [ -f input.txt ]; then \
+		echo -e "$(YELLOW)Removing [input.txt]$(RESET)"; \
+		rm input.txt; \
+	fi
+
+test:
+	@printf "date | value\n2011-01-03 | 3\n2011-01-03 | 2\n2011-01-03 | 1\n2011-01-03 | 1.2\n2011-01-09 | 1\n2012-01-11 | -1\n2001-42-42\n2012-01-11 | 1\n2012-01-11 | 2147483648\n" > input.txt
+	@echo "=====Created [input.txt]====="
 
 val: re
-	@valgrind --leak-check=full ./$(NAME)
+	@valgrind --leak-check=full ./$(NAME) input.txt
+
+run: fclean all test
+	@./$(NAME) input.txt
 
 re: fclean all
+
 
 .PHONY: all clean fclean re
