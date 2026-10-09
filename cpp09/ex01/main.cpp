@@ -6,7 +6,7 @@
 /*   By: vivaz-ca <vivaz-ca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 14:23:15 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2026/10/07 14:23:59 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2026/10/09 13:41:19 by vivaz-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,21 @@
 
 int main(int argc, char *argv[])
 {
-    std::cout << "Fodasse essa merda toda" << std::endl;
+    if (argc != 2)
+    {
+        std::cerr << "Error: not enough arguments" << std::endl;
+        return (1);
+    }
+    try
+    {
+        RPN rpn(argv[1]);
+        rpn.parseInput();
+        rpn.calculate();
+    }
+    catch (std::exception & e)
+    {
+        std::cerr << e.what() << std::endl;
+        return (1);
+    }
     return (0);
 }
